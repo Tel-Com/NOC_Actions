@@ -1,2 +1,2 @@
 # NOC_Actions
-#### Ferramenta desenvolvida para auxiliar no comportamento das ações NOC, além de padronizá-las para o melhor desenpenho e comunicação entre o Suporte e o Cliente.
+#### Ferramenta desenvolvida para auxiliar na execução das ações do NOC, padronizando processos para melhorar o desempenho e a comunicação entre o Suporte e o Cliente.

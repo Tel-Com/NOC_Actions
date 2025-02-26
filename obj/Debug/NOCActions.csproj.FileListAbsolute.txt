@@ -21,3 +21,12 @@ C:\NOCActions\obj\Debug\NOCActions.exe
 C:\NOCActions\obj\Debug\NOCActions.pdb
 C:\NOCActions\obj\Debug\NOCActions.MassivaForm.resources
 C:\NOCActions\obj\Debug\NOCActions.UserConfig.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\bin\Debug\NOCActions.exe
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\bin\Debug\NOCActions.pdb
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.csprojResolveAssemblyReference.cache
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.MainForm.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.MassivaForm.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.UserConfig.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.csproj.GenerateResource.Cache
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.exe
+C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.pdb

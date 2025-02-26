@@ -21,6 +21,7 @@ namespace NOCActions
 			InitializeComponent();
 			this.FormBorderStyle = FormBorderStyle.None; // Remove a borda da janela
 			this.TopMost = true; // Mantém a janela sempre no topo
+			OrdenarTabIndex();
 		}
 
 		// Permite mover a janela ao clicar e arrastar com o botão esquerdo do mouse
@@ -75,6 +76,18 @@ namespace NOCActions
 		{
 			MassivaForm massiva = new MassivaForm();
 			massiva.ShowDialog();
+		}
+		
+		// Método para organizar a ordem de tabulação dos elementos do formulário 
+		private void OrdenarTabIndex()
+		{
+			SemEnergia.TabIndex = 0;
+			ButtonSemContatoLocal.TabIndex = 1;
+			ButtonSemExpediente.TabIndex = 2;
+			ButtonInfraOkCliente.TabIndex = 3;
+			ButtonSemContatoOperadora.TabIndex = 4;
+			ButtonAberturaDeOs.TabIndex = 5;
+			ButtonPosicionamentoTecnico.TabIndex = 6;
 		}
 	}
 }

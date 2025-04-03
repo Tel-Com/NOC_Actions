@@ -112,7 +112,6 @@ namespace NOCActions
 					comboBox.Items.Add(dado);
 				}
 			}
-
 			comboBox.Sorted = true;
 		}
 

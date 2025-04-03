@@ -76,52 +76,56 @@ namespace NOCActions
 				MessageBox.Show("Erro ao carregar os dados: " + ex.Message);
 			}
 		}
-			
+		
 //		organiza o TAB
-			private void OrdenarTabIndex()
-			{
-				comboNomeCliente.TabIndex = 0;
-				comboEnderecoCliente.TabIndex = 1;
-				comboUnidadeDoCliente.TabIndex = 2;
-				comboRazaoSocialCliente.TabIndex = 3;
-				btnSalvar.TabIndex = 4;
-				btnExcluir.TabIndex = 5;
-				btnSair.TabIndex = 6;
-			}
-			
-			private void TimerGeneratorReload()
-			{
-				timer = new Timer();
-				timer.Interval = 2000; // Intervalo de 2 segundos
-				timer.Tick += Timer_Tick;
-				timer.Start();
-			}
-			
-			private void GerarIDUnico()
-			{
-				string uniqueID = "T&C" + Guid.NewGuid().ToString("N").Substring(0, 10); // Pega os 10 primeiros caracteres
-				maskedTextBox1UserID.Text = uniqueID;
-			}
-			
-			private void Timer_Tick(object sender, EventArgs e)
-			{
-				GerarIDUnico();
-				timer.Stop(); // Para o timer após a geração do ID
-			}
-			
+		private void OrdenarTabIndex()
+		{
+			comboNomeCliente.TabIndex = 0;
+			comboEnderecoCliente.TabIndex = 1;
+			comboUnidadeDoCliente.TabIndex = 2;
+			comboRazaoSocialCliente.TabIndex = 3;
+			btnSalvar.TabIndex = 4;
+			btnExcluir.TabIndex = 5;
+			btnSair.TabIndex = 6;
+		}
+		
+		private void TimerGeneratorReload()
+		{
+			timer = new Timer();
+			timer.Interval = 2000; // Intervalo de 2 segundos
+			timer.Tick += Timer_Tick;
+			timer.Start();
+		}
+		
+		private void GerarIDUnico()
+		{
+			string uniqueID = "T&C" + Guid.NewGuid().ToString("N").Substring(0, 10); // Pega os 10 primeiros caracteres
+			maskedTextBox1UserID.Text = uniqueID;
+		}
+		
+		private void Timer_Tick(object sender, EventArgs e)
+		{
+			GerarIDUnico();
+			timer.Stop(); // Para o timer após a geração do ID
+		}
+		
 //		button responsável por salvar informações do novo contrato
-			void BtnSalvarClick(object sender, EventArgs e)
-			{
-				SalvarInformacoesDoFormulario();
-				
-				string nomeCliente = comboNomeCliente.Text;
-				string enderecoCliente = comboEnderecoCliente.Text;
-				string unidadeCliente = comboUnidadeDoCliente.Text;
-				string razaoSocialCliente = comboRazaoSocialCliente.Text;
-				string emailContatoCliente = comboEmailContatoCliente.Text;
-				
-				ACAO_ComunicacaoComCliente acaoForm = new ACAO_ComunicacaoComCliente(nomeCliente, enderecoCliente, unidadeCliente, razaoSocialCliente, emailContatoCliente);
-				this.Close();
-			}
+		void BtnSalvarClick(object sender, EventArgs e)
+		{
+			SalvarInformacoesDoFormulario();
+			
+			string nomeCliente = comboNomeCliente.Text;
+			string enderecoCliente = comboEnderecoCliente.Text;
+			string unidadeCliente = comboUnidadeDoCliente.Text;
+			string razaoSocialCliente = comboRazaoSocialCliente.Text;
+			string emailContatoCliente = comboEmailContatoCliente.Text;
+			
+			ACAO_ComunicacaoComCliente acaoForm = new ACAO_ComunicacaoComCliente(nomeCliente, enderecoCliente, unidadeCliente, razaoSocialCliente, emailContatoCliente);
+			this.Close();
+		}
+		void ListaDeClientesSalvosCellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			
 		}
 	}
+}

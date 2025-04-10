@@ -11,3 +11,16 @@ C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.csproj.Generate
 C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.exe
 C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.pdb
 C:\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.CONFIG_EmailsECorpoDeEmailSalvos.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\bin\Debug\NOC_Actions.exe
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\bin\Debug\NOC_Actions.pdb
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.csprojResolveAssemblyReference.cache
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.CONFIG_ComunicacaoComCliente.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.CONFIG_EmailsECorpoDeEmailSalvos.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.MainForm.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.MassivaForm.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.MenuDeAcesso.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.ACAO_ComunicacaoComCliente.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOCActions.UserConfig.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.csproj.GenerateResource.Cache
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.exe
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Actions\obj\Debug\NOC_Actions.pdb

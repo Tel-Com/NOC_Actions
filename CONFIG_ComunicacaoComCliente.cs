@@ -8,6 +8,9 @@
 using System;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace NOCActions
 {
@@ -31,7 +34,7 @@ namespace NOCActions
 			comboEnderecoCliente.Text = V2;
 			comboUnidadeDoCliente.Text = V3;
 			comboRazaoSocialCliente.Text = V4;
-			comboEmailContatoCliente.Text = V5;
+			comboEmailContratoCliente.Text = V5;
 		}
 
 //		Button responsável por salvar as informações do contrato
@@ -40,13 +43,13 @@ namespace NOCActions
 			try
 			{
 				RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\NOCActions\Cliente");
-				
-				key.SetValue("NomeCliente", comboNomeCliente.Text);
-				key.SetValue("EnderecoCliente", comboEnderecoCliente.Text);
-				key.SetValue("UnidadeCliente", comboUnidadeDoCliente.Text);
-				key.SetValue("RazaoSocialCliente", comboRazaoSocialCliente.Text);
-				key.SetValue("EmailContatoCliente", comboEmailContatoCliente.Text);
-				
+
+				SalvarDadoNaLista(key, "NomeClientes", comboNomeCliente.Text);
+				SalvarDadoNaLista(key, "Enderecos", comboEnderecoCliente.Text);
+				SalvarDadoNaLista(key, "Unidades", comboUnidadeDoCliente.Text);
+				SalvarDadoNaLista(key, "RazoesSociais", comboRazaoSocialCliente.Text);
+				SalvarDadoNaLista(key, "Emails", comboEmailContratoCliente.Text);
+
 				key.Close();
 			}
 			catch (Exception ex)
@@ -54,19 +57,35 @@ namespace NOCActions
 				MessageBox.Show("Erro ao salvar os dados: " + ex.Message);
 			}
 		}
+
+		private void SalvarDadoNaLista(RegistryKey KeyDown, string chave, string valor)
+			
+		{
+			string dadosSalvos = KeyDown.GetValue(chave, "").ToString();
+			List<string> lista = dadosSalvos.Split('|').ToList();
+			
+			if(!lista.Contains(valor) && !string.IsNullOrWhiteSpace(valor))
+			{
+				lista.Add(valor);
+				lista.Sort();
+				KeyDown.SetValue(chave, string.Join("|", lista.ToArray()));
+			}
+		}
+		
 		
 		private void CarregarInformacoesDeRegistro()
 		{
-			try {
+			try
+			{
 				RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\NOCActions\Cliente");
 
 				if (key != null)
 				{
-					comboNomeCliente.Text = key.GetValue("NomeCliente", "").ToString();
-					comboEnderecoCliente.Text = key.GetValue("EnderecoCliente", "").ToString();
-					comboUnidadeDoCliente.Text = key.GetValue("UnidadeCliente", "").ToString();
-					comboRazaoSocialCliente.Text = key.GetValue("RazaoSocialCliente", "").ToString();
-					comboEmailContatoCliente.Text = key.GetValue("EmailContatoCliente", "").ToString();
+					CarregarListaNoComboBox(key, "NomeClientes", comboNomeCliente);
+					CarregarListaNoComboBox(key, "Enderecos", comboEnderecoCliente);
+					CarregarListaNoComboBox(key, "Unidades", comboUnidadeDoCliente);
+					CarregarListaNoComboBox(key, "RazoesSociais", comboRazaoSocialCliente);
+					CarregarListaNoComboBox(key, "Emails", comboEmailContratoCliente);
 
 					key.Close();
 				}
@@ -75,6 +94,24 @@ namespace NOCActions
 			{
 				MessageBox.Show("Erro ao carregar os dados: " + ex.Message);
 			}
+		}
+		
+		
+		private void CarregarListaNoComboBox(RegistryKey key, string chave, ComboBox comboBox)
+		{
+			string dados = key.GetValue(chave, "").ToString();
+			string[] itens = dados.Split('|');
+
+			comboBox.Items.Clear();
+			foreach (string item in itens)
+			{
+				if (!string.IsNullOrWhiteSpace(item))
+				{
+					comboBox.Items.Add(item);
+				}
+			}
+
+			comboBox.Sorted = true;
 		}
 		
 //		organiza o TAB
@@ -118,7 +155,7 @@ namespace NOCActions
 			string enderecoCliente = comboEnderecoCliente.Text;
 			string unidadeCliente = comboUnidadeDoCliente.Text;
 			string razaoSocialCliente = comboRazaoSocialCliente.Text;
-			string emailContatoCliente = comboEmailContatoCliente.Text;
+			string emailContatoCliente = comboEmailContratoCliente.Text;
 			
 			ACAO_ComunicacaoComCliente acaoForm = new ACAO_ComunicacaoComCliente(nomeCliente, enderecoCliente, unidadeCliente, razaoSocialCliente, emailContatoCliente);
 			this.Close();

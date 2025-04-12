@@ -15,19 +15,19 @@ namespace NOCActions
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1UserID;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.TextBox comboNomeCliente;
-        private System.Windows.Forms.TextBox comboEnderecoCliente;
-        private System.Windows.Forms.TextBox comboUnidadeDoCliente;
-        private System.Windows.Forms.TextBox comboRazaoSocialCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox comboEmailContatoCliente;
         private System.Windows.Forms.Label combo;
         private System.Windows.Forms.DataGridView listaDeClientesSalvos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Unidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Email;
+        private System.Windows.Forms.ComboBox comboNomeCliente;
+        private System.Windows.Forms.ComboBox comboEnderecoCliente;
+        private System.Windows.Forms.ComboBox comboUnidadeDoCliente;
+        private System.Windows.Forms.ComboBox comboRazaoSocialCliente;
+        private System.Windows.Forms.ComboBox comboEmailContratoCliente;
 
 //        public CONFIG_ComunicacaoComCliente()
 //        {
@@ -52,21 +52,21 @@ namespace NOCActions
         	this.btnSair = new System.Windows.Forms.Button();
         	this.btnSalvar = new System.Windows.Forms.Button();
         	this.btnExcluir = new System.Windows.Forms.Button();
-        	this.comboNomeCliente = new System.Windows.Forms.TextBox();
-        	this.comboEnderecoCliente = new System.Windows.Forms.TextBox();
-        	this.comboUnidadeDoCliente = new System.Windows.Forms.TextBox();
-        	this.comboRazaoSocialCliente = new System.Windows.Forms.TextBox();
         	this.label3 = new System.Windows.Forms.Label();
         	this.label4 = new System.Windows.Forms.Label();
         	this.labelID = new System.Windows.Forms.Label();
         	this.maskedTextBox1UserID = new System.Windows.Forms.MaskedTextBox();
         	this.button1 = new System.Windows.Forms.Button();
-        	this.comboEmailContatoCliente = new System.Windows.Forms.TextBox();
         	this.combo = new System.Windows.Forms.Label();
         	this.listaDeClientesSalvos = new System.Windows.Forms.DataGridView();
         	this.Column_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
         	this.Column_Unidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
         	this.Column_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        	this.comboNomeCliente = new System.Windows.Forms.ComboBox();
+        	this.comboEnderecoCliente = new System.Windows.Forms.ComboBox();
+        	this.comboUnidadeDoCliente = new System.Windows.Forms.ComboBox();
+        	this.comboRazaoSocialCliente = new System.Windows.Forms.ComboBox();
+        	this.comboEmailContratoCliente = new System.Windows.Forms.ComboBox();
         	((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         	this.splitContainer1.SuspendLayout();
         	((System.ComponentModel.ISupportInitialize)(this.listaDeClientesSalvos)).BeginInit();
@@ -182,38 +182,6 @@ namespace NOCActions
         	this.btnExcluir.Text = "Excluir";
         	this.btnExcluir.UseVisualStyleBackColor = true;
         	// 
-        	// comboNomeCliente
-        	// 
-        	this.comboNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboNomeCliente.Location = new System.Drawing.Point(336, 26);
-        	this.comboNomeCliente.Name = "comboNomeCliente";
-        	this.comboNomeCliente.Size = new System.Drawing.Size(317, 24);
-        	this.comboNomeCliente.TabIndex = 10000;
-        	// 
-        	// comboEnderecoCliente
-        	// 
-        	this.comboEnderecoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboEnderecoCliente.Location = new System.Drawing.Point(141, 61);
-        	this.comboEnderecoCliente.Name = "comboEnderecoCliente";
-        	this.comboEnderecoCliente.Size = new System.Drawing.Size(512, 24);
-        	this.comboEnderecoCliente.TabIndex = 10001;
-        	// 
-        	// comboUnidadeDoCliente
-        	// 
-        	this.comboUnidadeDoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboUnidadeDoCliente.Location = new System.Drawing.Point(141, 96);
-        	this.comboUnidadeDoCliente.Name = "comboUnidadeDoCliente";
-        	this.comboUnidadeDoCliente.Size = new System.Drawing.Size(512, 24);
-        	this.comboUnidadeDoCliente.TabIndex = 10002;
-        	// 
-        	// comboRazaoSocialCliente
-        	// 
-        	this.comboRazaoSocialCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboRazaoSocialCliente.Location = new System.Drawing.Point(141, 131);
-        	this.comboRazaoSocialCliente.Name = "comboRazaoSocialCliente";
-        	this.comboRazaoSocialCliente.Size = new System.Drawing.Size(512, 24);
-        	this.comboRazaoSocialCliente.TabIndex = 10003;
-        	// 
         	// label3
         	// 
         	this.label3.AutoSize = true;
@@ -265,14 +233,6 @@ namespace NOCActions
         	this.button1.Text = "Modelo E-mail";
         	this.button1.UseVisualStyleBackColor = true;
         	// 
-        	// comboEmailContatoCliente
-        	// 
-        	this.comboEmailContatoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboEmailContatoCliente.Location = new System.Drawing.Point(141, 166);
-        	this.comboEmailContatoCliente.Name = "comboEmailContatoCliente";
-        	this.comboEmailContatoCliente.Size = new System.Drawing.Size(512, 24);
-        	this.comboEmailContatoCliente.TabIndex = 10010;
-        	// 
         	// combo
         	// 
         	this.combo.AutoSize = true;
@@ -317,19 +277,64 @@ namespace NOCActions
         	this.Column_Email.Name = "Column_Email";
         	this.Column_Email.ReadOnly = true;
         	// 
+        	// comboNomeCliente
+        	// 
+        	this.comboNomeCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.comboNomeCliente.FormattingEnabled = true;
+        	this.comboNomeCliente.Location = new System.Drawing.Point(321, 29);
+        	this.comboNomeCliente.Name = "comboNomeCliente";
+        	this.comboNomeCliente.Size = new System.Drawing.Size(332, 25);
+        	this.comboNomeCliente.TabIndex = 10012;
+        	// 
+        	// comboEnderecoCliente
+        	// 
+        	this.comboEnderecoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.comboEnderecoCliente.FormattingEnabled = true;
+        	this.comboEnderecoCliente.Location = new System.Drawing.Point(141, 65);
+        	this.comboEnderecoCliente.Name = "comboEnderecoCliente";
+        	this.comboEnderecoCliente.Size = new System.Drawing.Size(512, 25);
+        	this.comboEnderecoCliente.TabIndex = 10013;
+        	// 
+        	// comboUnidadeDoCliente
+        	// 
+        	this.comboUnidadeDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.comboUnidadeDoCliente.FormattingEnabled = true;
+        	this.comboUnidadeDoCliente.Location = new System.Drawing.Point(141, 97);
+        	this.comboUnidadeDoCliente.Name = "comboUnidadeDoCliente";
+        	this.comboUnidadeDoCliente.Size = new System.Drawing.Size(512, 25);
+        	this.comboUnidadeDoCliente.TabIndex = 10014;
+        	// 
+        	// comboRazaoSocialCliente
+        	// 
+        	this.comboRazaoSocialCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.comboRazaoSocialCliente.FormattingEnabled = true;
+        	this.comboRazaoSocialCliente.Location = new System.Drawing.Point(139, 132);
+        	this.comboRazaoSocialCliente.Name = "comboRazaoSocialCliente";
+        	this.comboRazaoSocialCliente.Size = new System.Drawing.Size(514, 25);
+        	this.comboRazaoSocialCliente.TabIndex = 10015;
+        	// 
+        	// comboEmailContratoCliente
+        	// 
+        	this.comboEmailContratoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.comboEmailContratoCliente.FormattingEnabled = true;
+        	this.comboEmailContratoCliente.Location = new System.Drawing.Point(139, 167);
+        	this.comboEmailContratoCliente.Name = "comboEmailContratoCliente";
+        	this.comboEmailContratoCliente.Size = new System.Drawing.Size(514, 25);
+        	this.comboEmailContratoCliente.TabIndex = 10016;
+        	// 
         	// CONFIG_ComunicacaoComCliente
         	// 
         	this.ClientSize = new System.Drawing.Size(701, 566);
-        	this.Controls.Add(this.listaDeClientesSalvos);
-        	this.Controls.Add(this.comboEmailContatoCliente);
-        	this.Controls.Add(this.combo);
-        	this.Controls.Add(this.button1);
-        	this.Controls.Add(this.label4);
-        	this.Controls.Add(this.label3);
+        	this.Controls.Add(this.comboEmailContratoCliente);
         	this.Controls.Add(this.comboRazaoSocialCliente);
         	this.Controls.Add(this.comboUnidadeDoCliente);
         	this.Controls.Add(this.comboEnderecoCliente);
         	this.Controls.Add(this.comboNomeCliente);
+        	this.Controls.Add(this.listaDeClientesSalvos);
+        	this.Controls.Add(this.combo);
+        	this.Controls.Add(this.button1);
+        	this.Controls.Add(this.label4);
+        	this.Controls.Add(this.label3);
         	this.Controls.Add(this.maskedTextBox1UserID);
         	this.Controls.Add(this.btnExcluir);
         	this.Controls.Add(this.btnSalvar);

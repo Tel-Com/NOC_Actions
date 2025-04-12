@@ -120,5 +120,9 @@ namespace NOCActions
 		{
 			CarregarDadosCliente();
 		}
+		void BtnPreviaEmailClick(object sender, EventArgs e)
+		{
+	
+		}
 	}
 }

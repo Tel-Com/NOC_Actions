@@ -30,6 +30,9 @@ namespace NOCActions
 			
 			// Carregar lista de clientes salvos localmente
 			CarregarListaLocalmente();
+			
+			this.listBox_ClientesAdicionados.SelectedIndexChanged += listBox_ClientesAdicionados_SelectedIndexChanged;
+			
 		}
 
 		// Construtor que preenche os campos do formulário com dados fornecidos
@@ -265,6 +268,101 @@ namespace NOCActions
 			catch (Exception ex)
 			{
 				MessageBox.Show("Erro ao carregar os dados do arquivo: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+		void BtnExcluirClick(object sender, EventArgs e)
+		{
+			{
+				if (listBox_ClientesAdicionados.SelectedItem != null)
+				{
+					var resultado = MessageBox.Show("Deseja realmente excluir o cliente selecionado?",
+					                                "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+					if (resultado == DialogResult.Yes)
+					{
+						
+
+						string itemSelecionado = listBox_ClientesAdicionados.SelectedItem.ToString();
+						
+						listBox_ClientesAdicionados.Items.Remove(itemSelecionado);
+						
+						
+						RemoverItemDoRegistro(comboNomeCliente.Text, "NomeClientes");
+						RemoverItemDoRegistro(comboEnderecoCliente.Text, "Enderecos");
+						RemoverItemDoRegistro(comboUnidadeDoCliente.Text, "Unidades");
+						RemoverItemDoRegistro(comboRazaoSocialCliente.Text, "RazoesSociais");
+						RemoverItemDoRegistro(comboEmailContratoCliente.Text, "Emails");
+
+						
+						comboNomeCliente.Text = "";
+						comboEnderecoCliente.Text = "";
+						comboUnidadeDoCliente.Text = "";
+						comboRazaoSocialCliente.Text = "";
+						comboEmailContratoCliente.Text = "";
+						maskedTextBox1UserID.Text = "";
+						
+						CarregarInformacoesDeRegistro();
+						SalvarListaLocalmente();
+						
+					}
+				}
+				else
+				{
+					MessageBox.Show("Selecione um cliente para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+			}
+		}
+		
+		
+		private void RemoverItemDoRegistro(string valor, string chave)
+		{
+			try
+			{
+				RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\NOCActions\Cliente", true);
+
+				if (key != null)
+				{
+					string dados = key.GetValue(chave, "").ToString();
+					List<string> lista = dados.Split('|').ToList();
+
+					if (lista.Contains(valor))
+					{
+						lista.Remove(valor);
+						key.SetValue(chave, string.Join("|", lista.ToArray()));
+					}
+
+					key.Close();
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao remover item do registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void listBox_ClientesAdicionados_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (listBox_ClientesAdicionados.SelectedItem != null)
+			{
+				string textoSelecionado = listBox_ClientesAdicionados.SelectedItem.ToString();
+
+				// Exemplo: "CLIENTE: NOME | RAZÃO SOCIAL: RS LTDA | ENDEREÇO: RUA TAL, 123"
+				try
+				{
+					string[] partes = textoSelecionado.Split('|');
+
+					string nome = partes[0].Replace("CLIENTE:", "").Trim();
+					string razao = partes[1].Replace("RAZÃO SOCIAL:", "").Trim();
+					string endereco = partes[2].Replace("ENDEREÇO:", "").Trim();
+
+					comboNomeCliente.Text = nome;
+					comboRazaoSocialCliente.Text = razao;
+					comboEnderecoCliente.Text = endereco;
+				}
+				catch
+				{
+					MessageBox.Show("Formato inválido do item selecionado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 			}
 		}
 	}

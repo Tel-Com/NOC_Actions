@@ -147,7 +147,7 @@ namespace NOCActions
         	// btnSair
         	// 
         	this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnSair.Location = new System.Drawing.Point(551, 429);
+        	this.btnSair.Location = new System.Drawing.Point(551, 421);
         	this.btnSair.Name = "btnSair";
         	this.btnSair.Size = new System.Drawing.Size(102, 48);
         	this.btnSair.TabIndex = 16;
@@ -157,7 +157,7 @@ namespace NOCActions
         	// btnSalvar
         	// 
         	this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnSalvar.Location = new System.Drawing.Point(269, 429);
+        	this.btnSalvar.Location = new System.Drawing.Point(269, 421);
         	this.btnSalvar.Name = "btnSalvar";
         	this.btnSalvar.Size = new System.Drawing.Size(124, 51);
         	this.btnSalvar.TabIndex = 17;
@@ -168,19 +168,20 @@ namespace NOCActions
         	// btnExcluir
         	// 
         	this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnExcluir.Location = new System.Drawing.Point(399, 429);
+        	this.btnExcluir.Location = new System.Drawing.Point(399, 421);
         	this.btnExcluir.Name = "btnExcluir";
         	this.btnExcluir.Size = new System.Drawing.Size(124, 51);
         	this.btnExcluir.TabIndex = 18;
         	this.btnExcluir.Text = "Excluir";
         	this.btnExcluir.UseVisualStyleBackColor = true;
+        	this.btnExcluir.Click += new System.EventHandler(this.BtnExcluirClick);
         	// 
         	// label3
         	// 
         	this.label3.AutoSize = true;
         	this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.label3.ForeColor = System.Drawing.Color.Red;
-        	this.label3.Location = new System.Drawing.Point(53, 499);
+        	this.label3.Location = new System.Drawing.Point(112, 518);
         	this.label3.Name = "label3";
         	this.label3.Size = new System.Drawing.Size(21, 13);
         	this.label3.TabIndex = 10004;
@@ -219,7 +220,7 @@ namespace NOCActions
         	// 
         	this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-        	this.button1.Location = new System.Drawing.Point(139, 429);
+        	this.button1.Location = new System.Drawing.Point(139, 421);
         	this.button1.Name = "button1";
         	this.button1.Size = new System.Drawing.Size(124, 51);
         	this.button1.TabIndex = 10008;
@@ -267,18 +268,18 @@ namespace NOCActions
         	// 
         	this.comboRazaoSocialCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.comboRazaoSocialCliente.FormattingEnabled = true;
-        	this.comboRazaoSocialCliente.Location = new System.Drawing.Point(139, 132);
+        	this.comboRazaoSocialCliente.Location = new System.Drawing.Point(141, 132);
         	this.comboRazaoSocialCliente.Name = "comboRazaoSocialCliente";
-        	this.comboRazaoSocialCliente.Size = new System.Drawing.Size(514, 25);
+        	this.comboRazaoSocialCliente.Size = new System.Drawing.Size(512, 25);
         	this.comboRazaoSocialCliente.TabIndex = 10015;
         	// 
         	// comboEmailContratoCliente
         	// 
         	this.comboEmailContratoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.comboEmailContratoCliente.FormattingEnabled = true;
-        	this.comboEmailContratoCliente.Location = new System.Drawing.Point(139, 167);
+        	this.comboEmailContratoCliente.Location = new System.Drawing.Point(141, 167);
         	this.comboEmailContratoCliente.Name = "comboEmailContratoCliente";
-        	this.comboEmailContratoCliente.Size = new System.Drawing.Size(514, 25);
+        	this.comboEmailContratoCliente.Size = new System.Drawing.Size(512, 25);
         	this.comboEmailContratoCliente.TabIndex = 10016;
         	// 
         	// listBox_ClientesAdicionados
@@ -286,7 +287,7 @@ namespace NOCActions
         	this.listBox_ClientesAdicionados.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.listBox_ClientesAdicionados.FormattingEnabled = true;
         	this.listBox_ClientesAdicionados.ItemHeight = 17;
-        	this.listBox_ClientesAdicionados.Location = new System.Drawing.Point(59, 235);
+        	this.listBox_ClientesAdicionados.Location = new System.Drawing.Point(59, 237);
         	this.listBox_ClientesAdicionados.Name = "listBox_ClientesAdicionados";
         	this.listBox_ClientesAdicionados.Size = new System.Drawing.Size(594, 174);
         	this.listBox_ClientesAdicionados.TabIndex = 10017;

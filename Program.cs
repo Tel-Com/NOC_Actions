@@ -18,7 +18,7 @@ namespace NOCActions
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new CONFIG_ComunicacaoComCliente());
+			Application.Run(new ACAO_ComunicacaoComCliente());
 		}
 	}
 }

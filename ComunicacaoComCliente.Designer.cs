@@ -277,6 +277,7 @@ namespace NOCActions
         	this.btnPreviaEmail.TabIndex = 23;
         	this.btnPreviaEmail.Text = "Prévia do Email";
         	this.btnPreviaEmail.UseVisualStyleBackColor = true;
+        	this.btnPreviaEmail.Click += new System.EventHandler(this.BtnPreviaEmailClick);
         	// 
         	// ACAO_ComunicacaoComCliente
         	// 

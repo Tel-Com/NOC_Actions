@@ -186,7 +186,6 @@ namespace NOCActions
         	this.btnExcluir.TabIndex = 18;
         	this.btnExcluir.Text = "Excluir";
         	this.btnExcluir.UseVisualStyleBackColor = true;
-//        	this.btnExcluir.Click += new System.EventHandler(this.BtnExcluirClick);
         	// 
         	// labelID
         	// 
@@ -395,7 +394,7 @@ namespace NOCActions
         	this.label4.AutoSize = true;
         	this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
         	this.label4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-        	this.label4.Location = new System.Drawing.Point(-6, 119);
+        	this.label4.Location = new System.Drawing.Point(0, 119);
         	this.label4.Name = "label4";
         	this.label4.Size = new System.Drawing.Size(703, 21);
         	this.label4.TabIndex = 10032;

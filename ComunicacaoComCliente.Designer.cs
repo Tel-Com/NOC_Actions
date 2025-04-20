@@ -77,7 +77,7 @@ namespace NOCActions
         	this.comboBox1De.FormattingEnabled = true;
         	this.comboBox1De.Location = new System.Drawing.Point(127, 65);
         	this.comboBox1De.Name = "comboBox1De";
-        	this.comboBox1De.Size = new System.Drawing.Size(619, 26);
+        	this.comboBox1De.Size = new System.Drawing.Size(514, 26);
         	this.comboBox1De.TabIndex = 2;
         	// 
         	// comboBox3Cc
@@ -86,7 +86,7 @@ namespace NOCActions
         	this.comboBox3Cc.FormattingEnabled = true;
         	this.comboBox3Cc.Location = new System.Drawing.Point(127, 123);
         	this.comboBox3Cc.Name = "comboBox3Cc";
-        	this.comboBox3Cc.Size = new System.Drawing.Size(619, 26);
+        	this.comboBox3Cc.Size = new System.Drawing.Size(514, 26);
         	this.comboBox3Cc.TabIndex = 3;
         	// 
         	// textBox1EmailAssunto
@@ -95,7 +95,7 @@ namespace NOCActions
         	this.textBox1EmailAssunto.Location = new System.Drawing.Point(127, 163);
         	this.textBox1EmailAssunto.Multiline = true;
         	this.textBox1EmailAssunto.Name = "textBox1EmailAssunto";
-        	this.textBox1EmailAssunto.Size = new System.Drawing.Size(619, 27);
+        	this.textBox1EmailAssunto.Size = new System.Drawing.Size(514, 27);
         	this.textBox1EmailAssunto.TabIndex = 4;
         	// 
         	// label1
@@ -158,7 +158,7 @@ namespace NOCActions
         	this.richTextBox1Descricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
         	this.richTextBox1Descricao.Location = new System.Drawing.Point(127, 197);
         	this.richTextBox1Descricao.Name = "richTextBox1Descricao";
-        	this.richTextBox1Descricao.Size = new System.Drawing.Size(619, 257);
+        	this.richTextBox1Descricao.Size = new System.Drawing.Size(514, 257);
         	this.richTextBox1Descricao.TabIndex = 13;
         	this.richTextBox1Descricao.Text = "";
         	// 
@@ -166,7 +166,7 @@ namespace NOCActions
         	// 
         	this.btnDeletar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnDeletar.ForeColor = System.Drawing.SystemColors.ControlText;
-        	this.btnDeletar.Location = new System.Drawing.Point(622, 470);
+        	this.btnDeletar.Location = new System.Drawing.Point(517, 462);
         	this.btnDeletar.Name = "btnDeletar";
         	this.btnDeletar.Size = new System.Drawing.Size(124, 51);
         	this.btnDeletar.TabIndex = 14;
@@ -177,7 +177,7 @@ namespace NOCActions
         	// 
         	this.btnEnviar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnEnviar.ForeColor = System.Drawing.SystemColors.ControlText;
-        	this.btnEnviar.Location = new System.Drawing.Point(492, 470);
+        	this.btnEnviar.Location = new System.Drawing.Point(387, 462);
         	this.btnEnviar.Name = "btnEnviar";
         	this.btnEnviar.Size = new System.Drawing.Size(124, 51);
         	this.btnEnviar.TabIndex = 15;
@@ -187,13 +187,13 @@ namespace NOCActions
         	// btnConfiguracaoDeContratoEUsuarioPadrao
         	// 
         	this.btnConfiguracaoDeContratoEUsuarioPadrao.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-        	this.btnConfiguracaoDeContratoEUsuarioPadrao.Location = new System.Drawing.Point(232, 470);
+        	this.btnConfiguracaoDeContratoEUsuarioPadrao.Location = new System.Drawing.Point(127, 462);
         	this.btnConfiguracaoDeContratoEUsuarioPadrao.Name = "btnConfiguracaoDeContratoEUsuarioPadrao";
         	this.btnConfiguracaoDeContratoEUsuarioPadrao.Size = new System.Drawing.Size(124, 51);
         	this.btnConfiguracaoDeContratoEUsuarioPadrao.TabIndex = 22;
         	this.btnConfiguracaoDeContratoEUsuarioPadrao.Text = "Configuração";
         	this.btnConfiguracaoDeContratoEUsuarioPadrao.UseVisualStyleBackColor = true;
-        	this.btnConfiguracaoDeContratoEUsuarioPadrao.Click += new System.EventHandler(this.BtnConfiguracoesClick);
+        	this.btnConfiguracaoDeContratoEUsuarioPadrao.Click += new System.EventHandler(this.BtnConfiguracaoDeContratoEUsuarioPadraoClick);
         	// 
         	// panel1
         	// 
@@ -216,7 +216,7 @@ namespace NOCActions
         	this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
         	this.panel1.Location = new System.Drawing.Point(0, 0);
         	this.panel1.Name = "panel1";
-        	this.panel1.Size = new System.Drawing.Size(806, 588);
+        	this.panel1.Size = new System.Drawing.Size(701, 588);
         	this.panel1.TabIndex = 1;
         	// 
         	// label8
@@ -234,13 +234,12 @@ namespace NOCActions
         	// 
         	this.btnPreviaEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.btnPreviaEmail.ForeColor = System.Drawing.SystemColors.ControlText;
-        	this.btnPreviaEmail.Location = new System.Drawing.Point(362, 470);
+        	this.btnPreviaEmail.Location = new System.Drawing.Point(257, 462);
         	this.btnPreviaEmail.Name = "btnPreviaEmail";
         	this.btnPreviaEmail.Size = new System.Drawing.Size(124, 51);
         	this.btnPreviaEmail.TabIndex = 23;
         	this.btnPreviaEmail.Text = "Prévia do Email";
         	this.btnPreviaEmail.UseVisualStyleBackColor = true;
-        	this.btnPreviaEmail.Click += new System.EventHandler(this.BtnPreviaEmailClick);
         	// 
         	// comboBox2Para
         	// 
@@ -248,14 +247,14 @@ namespace NOCActions
         	this.comboBox2Para.FormattingEnabled = true;
         	this.comboBox2Para.Location = new System.Drawing.Point(127, 94);
         	this.comboBox2Para.Name = "comboBox2Para";
-        	this.comboBox2Para.Size = new System.Drawing.Size(619, 26);
+        	this.comboBox2Para.Size = new System.Drawing.Size(514, 26);
         	this.comboBox2Para.TabIndex = 1;
         	// 
         	// ACAO_ComunicacaoComCliente
         	// 
         	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        	this.ClientSize = new System.Drawing.Size(806, 588);
+        	this.ClientSize = new System.Drawing.Size(701, 588);
         	this.Controls.Add(this.panel1);
         	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
         	this.MaximizeBox = false;

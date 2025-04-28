@@ -57,7 +57,6 @@ namespace NOCActions
         	this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
         	this.label1 = new System.Windows.Forms.Label();
         	this.label2 = new System.Windows.Forms.Label();
-        	this.btnSair = new System.Windows.Forms.Button();
         	this.btnSalvar = new System.Windows.Forms.Button();
         	this.btnExcluir = new System.Windows.Forms.Button();
         	this.labelID = new System.Windows.Forms.Label();
@@ -84,6 +83,7 @@ namespace NOCActions
         	this.label4 = new System.Windows.Forms.Label();
         	this.label11 = new System.Windows.Forms.Label();
         	this.label8 = new System.Windows.Forms.Label();
+        	this.btnSair = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         	this.splitContainer1.SuspendLayout();
         	this.SuspendLayout();
@@ -155,16 +155,6 @@ namespace NOCActions
         	this.label2.Size = new System.Drawing.Size(65, 21);
         	this.label2.TabIndex = 15;
         	this.label2.Text = "Clientes";
-        	// 
-        	// btnSair
-        	// 
-        	this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnSair.Location = new System.Drawing.Point(551, 677);
-        	this.btnSair.Name = "btnSair";
-        	this.btnSair.Size = new System.Drawing.Size(102, 48);
-        	this.btnSair.TabIndex = 16;
-        	this.btnSair.Text = "Sair";
-        	this.btnSair.UseVisualStyleBackColor = true;
         	// 
         	// btnSalvar
         	// 
@@ -422,6 +412,16 @@ namespace NOCActions
         	this.label8.Size = new System.Drawing.Size(236, 25);
         	this.label8.TabIndex = 10034;
         	this.label8.Text = "Adicionar um novo Cliente";
+        	// 
+        	// btnSair
+        	// 
+        	this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F);
+        	this.btnSair.Location = new System.Drawing.Point(551, 677);
+        	this.btnSair.Name = "btnSair";
+        	this.btnSair.Size = new System.Drawing.Size(102, 48);
+        	this.btnSair.TabIndex = 16;
+        	this.btnSair.Text = "Sair";
+        	this.btnSair.UseVisualStyleBackColor = true;
         	// 
         	// CONFIG_ComunicacaoComCliente
         	// 

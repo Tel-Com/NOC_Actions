@@ -22,21 +22,19 @@ namespace NOCActions
         private System.Windows.Forms.ComboBox comboRazaoSocialCliente;
         private System.Windows.Forms.ComboBox comboEmailContratoCliente_01;
         private System.Windows.Forms.ListBox listBox_ClientesAdicionados;
-        private System.Windows.Forms.ComboBox comboEmailContratoCliente_02;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboEmailContratoCliente_03;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox_Remetente;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnDuvida;
+        private System.Windows.Forms.Button btnDuvidaGeralDoFormulario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox_EmailCorporativoEmCopy;
         private System.Windows.Forms.Button btnSalvarRemetente;
         private System.Windows.Forms.Button btnSalvarEmailCorporativoEmCopy;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnDuvidaEmail;
 
 //        public CONFIG_ComunicacaoComCliente()
 //        {
@@ -68,14 +66,10 @@ namespace NOCActions
         	this.comboRazaoSocialCliente = new System.Windows.Forms.ComboBox();
         	this.comboEmailContratoCliente_01 = new System.Windows.Forms.ComboBox();
         	this.listBox_ClientesAdicionados = new System.Windows.Forms.ListBox();
-        	this.comboEmailContratoCliente_02 = new System.Windows.Forms.ComboBox();
-        	this.label5 = new System.Windows.Forms.Label();
-        	this.comboEmailContratoCliente_03 = new System.Windows.Forms.ComboBox();
-        	this.label6 = new System.Windows.Forms.Label();
         	this.label7 = new System.Windows.Forms.Label();
         	this.comboBox_Remetente = new System.Windows.Forms.ComboBox();
         	this.label9 = new System.Windows.Forms.Label();
-        	this.btnDuvida = new System.Windows.Forms.Button();
+        	this.btnDuvidaGeralDoFormulario = new System.Windows.Forms.Button();
         	this.label3 = new System.Windows.Forms.Label();
         	this.comboBox_EmailCorporativoEmCopy = new System.Windows.Forms.ComboBox();
         	this.btnSalvarRemetente = new System.Windows.Forms.Button();
@@ -84,6 +78,8 @@ namespace NOCActions
         	this.label11 = new System.Windows.Forms.Label();
         	this.label8 = new System.Windows.Forms.Label();
         	this.btnSair = new System.Windows.Forms.Button();
+        	this.panel1 = new System.Windows.Forms.Panel();
+        	this.btnDuvidaEmail = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
         	this.splitContainer1.SuspendLayout();
         	this.SuspendLayout();
@@ -139,7 +135,7 @@ namespace NOCActions
         	// 
         	this.label1.AutoSize = true;
         	this.label1.ForeColor = System.Drawing.SystemColors.ScrollBar;
-        	this.label1.Location = new System.Drawing.Point(112, 468);
+        	this.label1.Location = new System.Drawing.Point(119, 417);
         	this.label1.Name = "label1";
         	this.label1.Size = new System.Drawing.Size(541, 13);
         	this.label1.TabIndex = 14;
@@ -150,7 +146,7 @@ namespace NOCActions
         	// 
         	this.label2.AutoSize = true;
         	this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.label2.Location = new System.Drawing.Point(53, 467);
+        	this.label2.Location = new System.Drawing.Point(60, 416);
         	this.label2.Name = "label2";
         	this.label2.Size = new System.Drawing.Size(65, 21);
         	this.label2.TabIndex = 15;
@@ -159,7 +155,7 @@ namespace NOCActions
         	// btnSalvar
         	// 
         	this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnSalvar.Location = new System.Drawing.Point(269, 677);
+        	this.btnSalvar.Location = new System.Drawing.Point(276, 626);
         	this.btnSalvar.Name = "btnSalvar";
         	this.btnSalvar.Size = new System.Drawing.Size(124, 51);
         	this.btnSalvar.TabIndex = 17;
@@ -170,12 +166,13 @@ namespace NOCActions
         	// btnExcluir
         	// 
         	this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnExcluir.Location = new System.Drawing.Point(399, 677);
+        	this.btnExcluir.Location = new System.Drawing.Point(406, 626);
         	this.btnExcluir.Name = "btnExcluir";
         	this.btnExcluir.Size = new System.Drawing.Size(124, 51);
         	this.btnExcluir.TabIndex = 18;
         	this.btnExcluir.Text = "Excluir";
         	this.btnExcluir.UseVisualStyleBackColor = true;
+        	this.btnExcluir.Click += new System.EventHandler(this.BtnExcluirClick);
         	// 
         	// labelID
         	// 
@@ -199,11 +196,11 @@ namespace NOCActions
         	// 
         	this.combo.AutoSize = true;
         	this.combo.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.combo.Location = new System.Drawing.Point(73, 373);
+        	this.combo.Location = new System.Drawing.Point(66, 375);
         	this.combo.Name = "combo";
-        	this.combo.Size = new System.Drawing.Size(67, 21);
+        	this.combo.Size = new System.Drawing.Size(61, 21);
         	this.combo.TabIndex = 10009;
-        	this.combo.Text = "E-mail 1";
+        	this.combo.Text = "E-mails";
         	// 
         	// comboNomeCliente
         	// 
@@ -247,7 +244,7 @@ namespace NOCActions
         	this.comboEmailContratoCliente_01.FormattingEnabled = true;
         	this.comboEmailContratoCliente_01.Location = new System.Drawing.Point(141, 373);
         	this.comboEmailContratoCliente_01.Name = "comboEmailContratoCliente_01";
-        	this.comboEmailContratoCliente_01.Size = new System.Drawing.Size(512, 25);
+        	this.comboEmailContratoCliente_01.Size = new System.Drawing.Size(480, 25);
         	this.comboEmailContratoCliente_01.TabIndex = 10016;
         	// 
         	// listBox_ClientesAdicionados
@@ -255,48 +252,10 @@ namespace NOCActions
         	this.listBox_ClientesAdicionados.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.listBox_ClientesAdicionados.FormattingEnabled = true;
         	this.listBox_ClientesAdicionados.ItemHeight = 17;
-        	this.listBox_ClientesAdicionados.Location = new System.Drawing.Point(59, 493);
+        	this.listBox_ClientesAdicionados.Location = new System.Drawing.Point(66, 442);
         	this.listBox_ClientesAdicionados.Name = "listBox_ClientesAdicionados";
         	this.listBox_ClientesAdicionados.Size = new System.Drawing.Size(594, 174);
         	this.listBox_ClientesAdicionados.TabIndex = 10017;
-        	// 
-        	// comboEmailContratoCliente_02
-        	// 
-        	this.comboEmailContratoCliente_02.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboEmailContratoCliente_02.FormattingEnabled = true;
-        	this.comboEmailContratoCliente_02.Location = new System.Drawing.Point(141, 404);
-        	this.comboEmailContratoCliente_02.Name = "comboEmailContratoCliente_02";
-        	this.comboEmailContratoCliente_02.Size = new System.Drawing.Size(512, 25);
-        	this.comboEmailContratoCliente_02.TabIndex = 10019;
-        	// 
-        	// label5
-        	// 
-        	this.label5.AutoSize = true;
-        	this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.label5.Location = new System.Drawing.Point(73, 404);
-        	this.label5.Name = "label5";
-        	this.label5.Size = new System.Drawing.Size(67, 21);
-        	this.label5.TabIndex = 10018;
-        	this.label5.Text = "E-mail 2";
-        	// 
-        	// comboEmailContratoCliente_03
-        	// 
-        	this.comboEmailContratoCliente_03.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.comboEmailContratoCliente_03.FormattingEnabled = true;
-        	this.comboEmailContratoCliente_03.Location = new System.Drawing.Point(141, 435);
-        	this.comboEmailContratoCliente_03.Name = "comboEmailContratoCliente_03";
-        	this.comboEmailContratoCliente_03.Size = new System.Drawing.Size(512, 25);
-        	this.comboEmailContratoCliente_03.TabIndex = 10021;
-        	// 
-        	// label6
-        	// 
-        	this.label6.AutoSize = true;
-        	this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.label6.Location = new System.Drawing.Point(73, 435);
-        	this.label6.Name = "label6";
-        	this.label6.Size = new System.Drawing.Size(67, 21);
-        	this.label6.TabIndex = 10020;
-        	this.label6.Text = "E-mail 3";
         	// 
         	// label7
         	// 
@@ -327,16 +286,16 @@ namespace NOCActions
         	this.label9.TabIndex = 10025;
         	this.label9.Text = "Remetente";
         	// 
-        	// btnDuvida
+        	// btnDuvidaGeralDoFormulario
         	// 
-        	this.btnDuvida.AutoSize = true;
-        	this.btnDuvida.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnDuvida.Location = new System.Drawing.Point(59, 687);
-        	this.btnDuvida.Name = "btnDuvida";
-        	this.btnDuvida.Size = new System.Drawing.Size(27, 31);
-        	this.btnDuvida.TabIndex = 10027;
-        	this.btnDuvida.Text = "?";
-        	this.btnDuvida.UseVisualStyleBackColor = true;
+        	this.btnDuvidaGeralDoFormulario.AutoSize = true;
+        	this.btnDuvidaGeralDoFormulario.Font = new System.Drawing.Font("Segoe UI", 12F);
+        	this.btnDuvidaGeralDoFormulario.Location = new System.Drawing.Point(66, 636);
+        	this.btnDuvidaGeralDoFormulario.Name = "btnDuvidaGeralDoFormulario";
+        	this.btnDuvidaGeralDoFormulario.Size = new System.Drawing.Size(27, 31);
+        	this.btnDuvidaGeralDoFormulario.TabIndex = 10027;
+        	this.btnDuvidaGeralDoFormulario.Text = "?";
+        	this.btnDuvidaGeralDoFormulario.UseVisualStyleBackColor = true;
         	// 
         	// label3
         	// 
@@ -396,8 +355,10 @@ namespace NOCActions
         	// label11
         	// 
         	this.label11.AutoSize = true;
+        	this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(93)))));
         	this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        	this.label11.Location = new System.Drawing.Point(4, 4);
+        	this.label11.ForeColor = System.Drawing.Color.White;
+        	this.label11.Location = new System.Drawing.Point(4, 7);
         	this.label11.Name = "label11";
         	this.label11.Size = new System.Drawing.Size(226, 25);
         	this.label11.TabIndex = 10033;
@@ -416,30 +377,46 @@ namespace NOCActions
         	// btnSair
         	// 
         	this.btnSair.Font = new System.Drawing.Font("Segoe UI", 12F);
-        	this.btnSair.Location = new System.Drawing.Point(551, 677);
+        	this.btnSair.Location = new System.Drawing.Point(558, 626);
         	this.btnSair.Name = "btnSair";
         	this.btnSair.Size = new System.Drawing.Size(102, 48);
         	this.btnSair.TabIndex = 16;
         	this.btnSair.Text = "Sair";
         	this.btnSair.UseVisualStyleBackColor = true;
         	// 
+        	// panel1
+        	// 
+        	this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(93)))));
+        	this.panel1.Location = new System.Drawing.Point(0, 0);
+        	this.panel1.Name = "panel1";
+        	this.panel1.Size = new System.Drawing.Size(698, 41);
+        	this.panel1.TabIndex = 10035;
+        	// 
+        	// btnDuvidaEmail
+        	// 
+        	this.btnDuvidaEmail.AutoSize = true;
+        	this.btnDuvidaEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.btnDuvidaEmail.Location = new System.Drawing.Point(629, 372);
+        	this.btnDuvidaEmail.Name = "btnDuvidaEmail";
+        	this.btnDuvidaEmail.Size = new System.Drawing.Size(24, 27);
+        	this.btnDuvidaEmail.TabIndex = 10036;
+        	this.btnDuvidaEmail.Text = "?";
+        	this.btnDuvidaEmail.UseVisualStyleBackColor = true;
+        	// 
         	// CONFIG_ComunicacaoComCliente
         	// 
-        	this.ClientSize = new System.Drawing.Size(693, 766);
+        	this.ClientSize = new System.Drawing.Size(693, 692);
+        	this.Controls.Add(this.btnDuvidaEmail);
         	this.Controls.Add(this.label8);
         	this.Controls.Add(this.label11);
         	this.Controls.Add(this.btnSalvarEmailCorporativoEmCopy);
         	this.Controls.Add(this.btnSalvarRemetente);
         	this.Controls.Add(this.label3);
         	this.Controls.Add(this.comboBox_EmailCorporativoEmCopy);
-        	this.Controls.Add(this.btnDuvida);
+        	this.Controls.Add(this.btnDuvidaGeralDoFormulario);
         	this.Controls.Add(this.label9);
         	this.Controls.Add(this.comboBox_Remetente);
         	this.Controls.Add(this.label7);
-        	this.Controls.Add(this.comboEmailContratoCliente_03);
-        	this.Controls.Add(this.label6);
-        	this.Controls.Add(this.comboEmailContratoCliente_02);
-        	this.Controls.Add(this.label5);
         	this.Controls.Add(this.listBox_ClientesAdicionados);
         	this.Controls.Add(this.comboEmailContratoCliente_01);
         	this.Controls.Add(this.comboRazaoSocialCliente);
@@ -459,7 +436,8 @@ namespace NOCActions
         	this.Controls.Add(this.labelUnidade);
         	this.Controls.Add(this.labelEndereco);
         	this.Controls.Add(this.label4);
-        	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+        	this.Controls.Add(this.panel1);
+        	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         	this.MaximizeBox = false;
         	this.Name = "CONFIG_ComunicacaoComCliente";
         	this.Text = "Configurações";

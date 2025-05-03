@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace NOCActions
 {
@@ -21,6 +22,7 @@ namespace NOCActions
 		private string arquivoNomeCliente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "nome_cliente.txt");
 		private string arquivoEnderecoCliente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "endereco_cliente.txt");
 		private string arquivoUnidadeCliente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "unidade_cliente.txt");
+		
 		private string arquivoRazaoSocialCliente = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "razao_social_cliente.txt");
 		private string arquivoClientesAdicionados = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "clientes_adicionados.txt");
 
@@ -35,6 +37,10 @@ namespace NOCActions
 			CarregarInformacoesDoContratoDoCliente();
 			CarregarClientesAdicionados();
 			OrganizarTabIndex();
+			
+			
+			btnExcluir.Click += BtnExcluirClick;
+
 		}
 
 		// Evento de clique do botão de salvar
@@ -45,11 +51,9 @@ namespace NOCActions
 			
 			// Obtém os e-mails dos campos do formulário
 			string emailDestinatario1 = comboEmailContratoCliente_01.Text;
-			string emailDestinatario2 = comboEmailContratoCliente_02.Text;
-			string emailDestinatario3 = comboEmailContratoCliente_03.Text;
 
 			// Concatena os e-mails, separando-os por ponto e vírgula e removendo os vazios
-			string concatenarEmails = string.Join(";", new[] { emailDestinatario1, emailDestinatario2, emailDestinatario3 }
+			string concatenarEmails = string.Join(";", new[] { emailDestinatario1}
 			                                      .Where(email => !string.IsNullOrWhiteSpace(email)));
 
 			// Verifica se existem e-mails concatenados e os adiciona ao ComboBox do formulário principal
@@ -281,10 +285,6 @@ namespace NOCActions
 				{
 					if (!comboEmailContratoCliente_01.Items.Contains(email))
 						comboEmailContratoCliente_01.Items.Add(email);
-					if (!comboEmailContratoCliente_02.Items.Contains(email))
-						comboEmailContratoCliente_02.Items.Add(email);
-					if (!comboEmailContratoCliente_03.Items.Contains(email))
-						comboEmailContratoCliente_03.Items.Add(email);
 				}
 			}
 		}
@@ -298,16 +298,20 @@ namespace NOCActions
 			// Concatena os e-mails dos campos
 			string emailCliente = string.Join(" | ", new[] {
 			                                  	comboEmailContratoCliente_01.Text,
-			                                  	comboEmailContratoCliente_02.Text,
-			                                  	comboEmailContratoCliente_03.Text
 			                                  }.Where(email => !string.IsNullOrWhiteSpace(email)));
 
+			string enderecoCliente = comboEnderecoCliente.Text;
+			string razaoSocial = comboRazaoSocialCliente.Text;
+			
 			// Formata e adiciona o cliente na listBox
-			string clienteInfo = string.Format("{0} | {1} | {2}", nomeCliente, unidadeCliente, emailCliente);
+			string clienteInfo = string.Format("Cliente: {0} | Unidade: {1} | E-mail: {2} | Endereço: {3} | Razão Social:  {4}", nomeCliente, unidadeCliente, emailCliente, enderecoCliente, razaoSocial);
 			listBox_ClientesAdicionados.Items.Add(clienteInfo);
 
 			// Salva o cliente adicionado no arquivo
 			SalvarClienteAdicionadosNoArquivo(clienteInfo);
+			
+			comboEmailContratoCliente_01.Text = "";
+			
 		}
 
 		// Salva as informações do cliente adicionado no arquivo
@@ -347,6 +351,57 @@ namespace NOCActions
 			}
 		}
 		
+//		responsável por remover o Cliente adicionado no formulário por completo
+		void BtnExcluirClick(object sender, EventArgs e)
+		{
+			string clienteSelecionado = listBox_ClientesAdicionados.SelectedItem != null
+				? listBox_ClientesAdicionados.SelectedItem.ToString()
+				: string.Empty;
+
+			listBox_ClientesAdicionados.Items.Remove(clienteSelecionado);
+			RemoverLinhaDoArquivo(arquivoClientesAdicionados, clienteSelecionado);
+
+			string[] partes = clienteSelecionado.Split('|');
+			if (partes.Length >= 3)
+			{
+				string nome = partes[0].Replace("Cliente:", "").Trim();
+				string unidade = partes[1].Replace("Unidade:", "").Trim();
+				string[] emails = partes[2].Replace("E-mail:", "").Split(new[] { '|', ';' }, StringSplitOptions.RemoveEmptyEntries)
+					.Select(t => t.Trim()).ToArray();
+				string endereco = partes.Length >= 4 ? partes[3].Replace("Endereço:", "").Trim() : string.Empty;
+				string razaoSocial = partes.Length >= 5 ? partes[4].Replace("Razão Social:", "").Trim() : string.Empty;
+
+				RemoverLinhaDoArquivo(arquivoNomeCliente, nome);
+				RemoverLinhaDoArquivo(arquivoUnidadeCliente, unidade);
+				RemoverLinhaDoArquivo(arquivoEnderecoCliente, endereco);
+				RemoverLinhaDoArquivo(arquivoRazaoSocialCliente, razaoSocial);
+
+				comboNomeCliente.Items.Remove(nome);
+				comboUnidadeDoCliente.Items.Remove(unidade);
+				comboEnderecoCliente.Items.Remove(endereco);
+				comboRazaoSocialCliente.Items.Remove(razaoSocial);
+
+				foreach (string email in emails)
+				{
+					RemoverLinhaDoArquivo(arquivoEmailCliente, email);
+					comboEmailContratoCliente_01.Items.Remove(email);
+				}
+			}
+		}
+
+		private void RemoverLinhaDoArquivo(string caminhoArquivo, string linhaParaRemover)
+		{
+			if (File.Exists(caminhoArquivo))
+			{
+				var linhas = File.ReadAllLines(caminhoArquivo)
+					.Where(l => !string.Equals(l.Trim(), linhaParaRemover.Trim(), StringComparison.OrdinalIgnoreCase))
+					.Distinct()
+					.ToList();
+
+				File.WriteAllLines(caminhoArquivo, linhas);
+			}
+		}
+		
 		// Função responsável por organizar a navegação entre os controles do formulário
 		private void OrganizarTabIndex()
 		{
@@ -362,14 +417,11 @@ namespace NOCActions
 			comboRazaoSocialCliente.TabIndex = 7;
 
 			comboEmailContratoCliente_01.TabIndex = 8;
-			comboEmailContratoCliente_02.TabIndex = 9;
-			comboEmailContratoCliente_03.TabIndex = 10;
 
 			btnSalvar.TabIndex = 11;
 			btnExcluir.TabIndex = 12;
-		
-			btnDuvida.TabIndex = 13;
+			
+			btnDuvidaGeralDoFormulario.TabIndex = 13;
 		}
-
 	}
 }

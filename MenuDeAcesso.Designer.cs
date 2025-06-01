@@ -3,26 +3,24 @@
  * User: fjstavares
  * Date: 26/02/2025
  * Time: 15:19
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 namespace NOCActions
 {
 	partial class MenuDeAcesso
 	{
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Button button1AcaoAberturaDeMassiva;
 //		private System.Windows.Forms.Button buttonAvaliacaoComCliente;
-		private System.Windows.Forms.Button button3AberturaDeReparo;
+		private System.Windows.Forms.Button button1AcaoAberturaDeMassiva;
 		private System.Windows.Forms.Button btnEmailAberturaDeReparoParaCliente;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button6;
-		private System.Windows.Forms.Button buttonComunicacaoComCliente;
 		
 		// Adicione no topo da classe
 		private System.Windows.Forms.Panel panelTop;
 		private System.Windows.Forms.Label labelTitulo;
 		private System.Windows.Forms.Button buttonFechar;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button button4;
 
 		
 		protected override void Dispose(bool disposing)
@@ -36,96 +34,17 @@ namespace NOCActions
 		}
 		private void InitializeComponent()
 		{
-			this.button1AcaoAberturaDeMassiva = new System.Windows.Forms.Button();
-			this.button3AberturaDeReparo = new System.Windows.Forms.Button();
-			this.btnEmailAberturaDeReparoParaCliente = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.buttonComunicacaoComCliente = new System.Windows.Forms.Button();
 			this.buttonFechar = new System.Windows.Forms.Button();
 			this.labelTitulo = new System.Windows.Forms.Label();
 			this.panelTop = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
+			this.button1AcaoAberturaDeMassiva = new System.Windows.Forms.Button();
+			this.btnEmailAberturaDeReparoParaCliente = new System.Windows.Forms.Button();
 			this.panelTop.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// button1AcaoAberturaDeMassiva
-			// 
-			this.button1AcaoAberturaDeMassiva.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.button1AcaoAberturaDeMassiva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1AcaoAberturaDeMassiva.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1AcaoAberturaDeMassiva.Location = new System.Drawing.Point(3, 50);
-			this.button1AcaoAberturaDeMassiva.Name = "button1AcaoAberturaDeMassiva";
-			this.button1AcaoAberturaDeMassiva.Size = new System.Drawing.Size(97, 71);
-			this.button1AcaoAberturaDeMassiva.TabIndex = 1;
-			this.button1AcaoAberturaDeMassiva.Text = "Abertura de Massiva";
-			this.button1AcaoAberturaDeMassiva.UseVisualStyleBackColor = false;
-			this.button1AcaoAberturaDeMassiva.Click += new System.EventHandler(this.Button1AcaoAberturaDeMassivaClick);
-			// 
-			// button3AberturaDeReparo
-			// 
-			this.button3AberturaDeReparo.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.button3AberturaDeReparo.Enabled = false;
-			this.button3AberturaDeReparo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3AberturaDeReparo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3AberturaDeReparo.Location = new System.Drawing.Point(208, 127);
-			this.button3AberturaDeReparo.Name = "button3AberturaDeReparo";
-			this.button3AberturaDeReparo.Size = new System.Drawing.Size(97, 71);
-			this.button3AberturaDeReparo.TabIndex = 3;
-			this.button3AberturaDeReparo.Text = "Ação";
-			this.button3AberturaDeReparo.UseVisualStyleBackColor = false;
-			// 
-			// btnEmailAberturaDeReparoParaCliente
-			// 
-			this.btnEmailAberturaDeReparoParaCliente.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.btnEmailAberturaDeReparoParaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEmailAberturaDeReparoParaCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEmailAberturaDeReparoParaCliente.Location = new System.Drawing.Point(106, 50);
-			this.btnEmailAberturaDeReparoParaCliente.Name = "btnEmailAberturaDeReparoParaCliente";
-			this.btnEmailAberturaDeReparoParaCliente.Size = new System.Drawing.Size(97, 71);
-			this.btnEmailAberturaDeReparoParaCliente.TabIndex = 4;
-			this.btnEmailAberturaDeReparoParaCliente.Text = "Abertura de reparo";
-			this.btnEmailAberturaDeReparoParaCliente.UseVisualStyleBackColor = false;
-			this.btnEmailAberturaDeReparoParaCliente.Click += new System.EventHandler(this.BtnEmailAberturaDeReparoParaClienteClick);
-			// 
-			// button5
-			// 
-			this.button5.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.button5.Enabled = false;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Location = new System.Drawing.Point(3, 127);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(97, 71);
-			this.button5.TabIndex = 5;
-			this.button5.Text = "Ação";
-			this.button5.UseVisualStyleBackColor = false;
-			// 
-			// button6
-			// 
-			this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.button6.Enabled = false;
-			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button6.Location = new System.Drawing.Point(106, 127);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(97, 71);
-			this.button6.TabIndex = 6;
-			this.button6.Text = "Ação";
-			this.button6.UseVisualStyleBackColor = false;
-			// 
-			// buttonComunicacaoComCliente
-			// 
-			this.buttonComunicacaoComCliente.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.buttonComunicacaoComCliente.Enabled = false;
-			this.buttonComunicacaoComCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.buttonComunicacaoComCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonComunicacaoComCliente.Location = new System.Drawing.Point(208, 50);
-			this.buttonComunicacaoComCliente.Name = "buttonComunicacaoComCliente";
-			this.buttonComunicacaoComCliente.Size = new System.Drawing.Size(97, 71);
-			this.buttonComunicacaoComCliente.TabIndex = 2;
-			this.buttonComunicacaoComCliente.Text = "Ação";
-			this.buttonComunicacaoComCliente.UseVisualStyleBackColor = false;
-			this.buttonComunicacaoComCliente.Click += new System.EventHandler(this.ButtonComunicacaoComClienteClick);
 			// 
 			// buttonFechar
 			// 
@@ -163,17 +82,83 @@ namespace NOCActions
 			this.panelTop.Size = new System.Drawing.Size(308, 40);
 			this.panelTop.TabIndex = 0;
 			// 
+			// button1
+			// 
+			this.button1.Enabled = false;
+			this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.button1.Location = new System.Drawing.Point(208, 46);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(97, 71);
+			this.button1.TabIndex = 5;
+			this.button1.Text = "Ação";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this.button2.Enabled = false;
+			this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.button2.Location = new System.Drawing.Point(3, 121);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(97, 71);
+			this.button2.TabIndex = 6;
+			this.button2.Text = "Ação";
+			this.button2.UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this.button3.Enabled = false;
+			this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.button3.Location = new System.Drawing.Point(106, 121);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(97, 71);
+			this.button3.TabIndex = 7;
+			this.button3.Text = "Ação";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this.button4.Enabled = false;
+			this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.button4.Location = new System.Drawing.Point(208, 122);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(97, 71);
+			this.button4.TabIndex = 8;
+			this.button4.Text = "Ação";
+			this.button4.UseVisualStyleBackColor = true;
+			// 
+			// button1AcaoAberturaDeMassiva
+			// 
+			this.button1AcaoAberturaDeMassiva.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.button1AcaoAberturaDeMassiva.Location = new System.Drawing.Point(3, 46);
+			this.button1AcaoAberturaDeMassiva.Name = "button1AcaoAberturaDeMassiva";
+			this.button1AcaoAberturaDeMassiva.Size = new System.Drawing.Size(97, 71);
+			this.button1AcaoAberturaDeMassiva.TabIndex = 9;
+			this.button1AcaoAberturaDeMassiva.Text = "Abertura de Massiva";
+			this.button1AcaoAberturaDeMassiva.UseVisualStyleBackColor = true;
+			this.button1AcaoAberturaDeMassiva.Click += new System.EventHandler(this.Button1AcaoAberturaDeMassivaClick);
+			// 
+			// btnEmailAberturaDeReparoParaCliente
+			// 
+			this.btnEmailAberturaDeReparoParaCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnEmailAberturaDeReparoParaCliente.Location = new System.Drawing.Point(105, 46);
+			this.btnEmailAberturaDeReparoParaCliente.Name = "btnEmailAberturaDeReparoParaCliente";
+			this.btnEmailAberturaDeReparoParaCliente.Size = new System.Drawing.Size(97, 71);
+			this.btnEmailAberturaDeReparoParaCliente.TabIndex = 10;
+			this.btnEmailAberturaDeReparoParaCliente.Text = "Abertura de reparo";
+			this.btnEmailAberturaDeReparoParaCliente.UseVisualStyleBackColor = true;
+			this.btnEmailAberturaDeReparoParaCliente.Click += new System.EventHandler(this.BtnEmailAberturaDeReparoParaClienteClick);
+			// 
 			// MenuDeAcesso
 			// 
-			this.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.BackColor = System.Drawing.Color.Silver;
 			this.ClientSize = new System.Drawing.Size(308, 202);
-			this.Controls.Add(this.panelTop);
-			this.Controls.Add(this.button1AcaoAberturaDeMassiva);
-			this.Controls.Add(this.buttonComunicacaoComCliente);
-			this.Controls.Add(this.button3AberturaDeReparo);
 			this.Controls.Add(this.btnEmailAberturaDeReparoParaCliente);
-			this.Controls.Add(this.button5);
-			this.Controls.Add(this.button6);
+			this.Controls.Add(this.button1AcaoAberturaDeMassiva);
+			this.Controls.Add(this.button4);
+			this.Controls.Add(this.button3);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.panelTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "MenuDeAcesso";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

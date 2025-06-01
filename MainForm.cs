@@ -90,5 +90,9 @@ namespace NOCActions
 			ButtonAberturaDeOs.TabIndex = 5;
 			ButtonPosicionamentoTecnico.TabIndex = 6;
 		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+	
+		}
 	}
 }

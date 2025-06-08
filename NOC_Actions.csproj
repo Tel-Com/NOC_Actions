@@ -11,7 +11,7 @@
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <NoWin32Manifest>False</NoWin32Manifest>
-    <ApplicationIcon>..\..\Downloads\click_icon_211821.ico</ApplicationIcon>
+    <ApplicationIcon>..\..\Downloads\augmentedreality-5_111389.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>

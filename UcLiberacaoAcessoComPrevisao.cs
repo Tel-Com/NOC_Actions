@@ -5,27 +5,28 @@ namespace NOC_Actions
 {
 	public partial class UcLiberacaoDeAcessoComPrevisao : UserControl
 	{
-		private string mensagemASerExibida;
-
 		public UcLiberacaoDeAcessoComPrevisao()
 		{
 			InitializeComponent();
 		}
-
-		void BtnGravarECopiarClick(object sender, EventArgs e)
+		
+		private string MenagemDeNotificacaoAoCliente()
 		{
 			string getDadosTecnicos = richTextBox1_DadosTecnicos.Text.Trim();
 			string getPrevisaoChegada = textBox1_PrevisaoChegada.Text.Trim();
-
-			mensagemASerExibida =
-				"Prezados, necessário acionamento com a loja para liberação de acesso do(s) técnico(s) abaixo. " +
-				"Previsão de chegada às " + getPrevisaoChegada + "." +
+			
+			return "Prezados, é necessário acionar a loja para a liberação de acesso do(s) técnico(s) abaixo. " +
+				"Previsão de chegada às " + getPrevisaoChegada + ". Seguem os dados dos técnicos responsáveis pela solução do problema:" +
 				Environment.NewLine + Environment.NewLine +
 				getDadosTecnicos;
 
-			Clipboard.SetText(mensagemASerExibida);
-
-			// limpa os campos
+		}
+		
+		void BtnGravarECopiarClick(object sender, EventArgs e)
+		{
+			string msn = MenagemDeNotificacaoAoCliente();
+			Clipboard.SetText(msn);
+			
 			richTextBox1_DadosTecnicos.Text = "";
 			textBox1_PrevisaoChegada.Text = "";
 		}
@@ -64,12 +65,7 @@ namespace NOC_Actions
 				return;
 			}
 
-			string previa =
-				"Prezados, necessário acionamento com a loja para liberação de acesso do(s) técnico(s) abaixo. " +
-				"Previsão de chegada às " + getPrevisaoChegada + "." +
-				Environment.NewLine + Environment.NewLine +
-				getDadosTecnicos;
-
+			string previa = MenagemDeNotificacaoAoCliente();
 			PreviaDaMensagem(previa);
 		}
 	}

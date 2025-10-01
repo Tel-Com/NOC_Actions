@@ -23,6 +23,7 @@ namespace NOC_Actions
 		private System.Windows.Forms.RichTextBox richTextBox1_DadosTecnicos;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnFecharJanela;
+		private System.Windows.Forms.Button btnPreviaDaMensagem;
 		
 		/// <summary>
 		/// Disposes resources used by the control.
@@ -54,6 +55,7 @@ namespace NOC_Actions
 			this.richTextBox1_DadosTecnicos = new System.Windows.Forms.RichTextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.btnFecharJanela = new System.Windows.Forms.Button();
+			this.btnPreviaDaMensagem = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label5
@@ -135,19 +137,30 @@ namespace NOC_Actions
 			// 
 			// btnFecharJanela
 			// 
-			this.btnFecharJanela.Location = new System.Drawing.Point(44, 317);
+			this.btnFecharJanela.Location = new System.Drawing.Point(39, 316);
 			this.btnFecharJanela.Name = "btnFecharJanela";
-			this.btnFecharJanela.Size = new System.Drawing.Size(114, 33);
+			this.btnFecharJanela.Size = new System.Drawing.Size(60, 33);
 			this.btnFecharJanela.TabIndex = 20;
 			this.btnFecharJanela.Text = "Fechar";
 			this.btnFecharJanela.UseVisualStyleBackColor = true;
 			this.btnFecharJanela.Click += new System.EventHandler(this.BtnFecharJanelaClick);
+			// 
+			// btnPreviaDaMensagem
+			// 
+			this.btnPreviaDaMensagem.Location = new System.Drawing.Point(122, 316);
+			this.btnPreviaDaMensagem.Name = "btnPreviaDaMensagem";
+			this.btnPreviaDaMensagem.Size = new System.Drawing.Size(91, 33);
+			this.btnPreviaDaMensagem.TabIndex = 21;
+			this.btnPreviaDaMensagem.Text = "Prévia";
+			this.btnPreviaDaMensagem.UseVisualStyleBackColor = true;
+			this.btnPreviaDaMensagem.Click += new System.EventHandler(this.BtnPreviaDaMensagemClick);
 			// 
 			// UcLiberacaoDeAcessoSemPrevisao
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
+			this.Controls.Add(this.btnPreviaDaMensagem);
 			this.Controls.Add(this.btnFecharJanela);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.richTextBox1_DadosTecnicos);

@@ -11,13 +11,15 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
+		private string MontarMensagemDeNotificacao()
+		{
+			return "Prezados, informamos que foi identificado um bloqueio de natureza administrativo-financeira no contrato da unidade: " + Environment.NewLine + Environment.NewLine + textBox1_UnidadeComBloqueioFinanceiro.Text.Trim();
+		}
+		
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string getValueTextBox_textBox1_UnidadeComBloqueioFinanceiro = textBox1_UnidadeComBloqueioFinanceiro.Text;
-			string msn = "Prezados, informamos que foi identificado um bloqueio de natureza administrativo-financeira no contrato da unidade: " + getValueTextBox_textBox1_UnidadeComBloqueioFinanceiro + ".";
-			
+			string msn = MontarMensagemDeNotificacao();
 			Clipboard.SetText(msn);
-			textBox1_UnidadeComBloqueioFinanceiro.Text = "";
 		}
 		
 		void BtnApagarCamposClick(object sender, EventArgs e)
@@ -28,6 +30,8 @@ namespace NOC_Actions
 		{
 			this.FindForm().Close();
 		}
+		
+//		desativado
 		void BtnDetalharFaturaClick(object sender, EventArgs e)
 		{
 			this.Hide();

@@ -9,14 +9,21 @@ namespace NOC_Actions
 		{
 			InitializeComponent();
 		}
-		void BtnGravarECopiarClick(object sender, EventArgs e)
+		
+		private string MenagemDeNotificacaoAoCliente()
 		{
-			string msn = "Prezados, necessário acionamento com a loja para liberação de acesso do(s) técnico(s) abaixo. Ainda não foi repassado previsão de chegada, assim que obtivermos iremos atualizar a thread."
+			return "Prezados, é necessário acionar a loja para a liberação de acesso do(s) técnico(s) abaixo. Ainda não foi repassada a previsão de chegada; assim que a obtivermos, atualizaremos a thread."
 				+ Environment.NewLine + Environment.NewLine
 				+ richTextBox1_DadosTecnicos.Text;
+		}
+		
+		void BtnGravarECopiarClick(object sender, EventArgs e)
+		{
+			string msn = MenagemDeNotificacaoAoCliente();
 			Clipboard.SetText(msn);
 			richTextBox1_DadosTecnicos.Text = "";
 		}
+		
 		void BtnApagarCamposClick(object sender, EventArgs e)
 		{
 			richTextBox1_DadosTecnicos.Text = "";
@@ -24,6 +31,12 @@ namespace NOC_Actions
 		void BtnFecharJanelaClick(object sender, EventArgs e)
 		{
 			this.FindForm().Close();
+		}
+		
+		void BtnPreviaDaMensagemClick(object sender, EventArgs e)
+		{
+			string msn = MenagemDeNotificacaoAoCliente();
+			MessageBox.Show(msn, "Prévia da Mensagem");
 		}
 	}
 }

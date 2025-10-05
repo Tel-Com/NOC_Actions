@@ -12,7 +12,7 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
-		private string MensagemDeNotificacaoAoCliente()
+		private string GetCustomerNotificationMessage()
 		{
 			string getNumeroChamado = textBox1_ChamadoOperadora.Text.Trim();
 			string getHorarioDeRegistro = textBox2_horarioDoRegistroChamado.Text.Trim();
@@ -21,7 +21,7 @@ namespace NOC_Actions
 		
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			Clipboard.SetText(msn); 
 			
 			textBox1_ChamadoOperadora.Text = "";

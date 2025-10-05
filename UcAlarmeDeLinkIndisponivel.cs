@@ -12,7 +12,7 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
-		private string MensagemDeNotificacaoAoCliente()
+		private string GetCustomerNotificationMessage()
 		{
 			string getValueTextBox_NomeOperadora = textBox1_nomeOperadora.Text;
 			string getValueHorario_Queda = textBox2_horarioQueda.Text;
@@ -21,7 +21,7 @@ namespace NOC_Actions
 		
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			Clipboard.SetText(msn);
 			textBox1_nomeOperadora.Text = "";
 			textBox2_horarioQueda.Text = "";

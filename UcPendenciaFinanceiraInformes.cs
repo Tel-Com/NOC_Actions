@@ -11,14 +11,14 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
-		private string MensagemDeNotificacaoAoCliente()
+		private string GetCustomerNotificationMessage()
 		{
 			return "Prezados, informamos que foi identificado um bloqueio de natureza administrativo-financeira no contrato da unidade: " + Environment.NewLine + Environment.NewLine + textBox1_UnidadeComBloqueioFinanceiro.Text.Trim();
 		}
 		
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			Clipboard.SetText(msn);
 			textBox1_UnidadeComBloqueioFinanceiro.Text="";
 		}

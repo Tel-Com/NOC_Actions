@@ -10,7 +10,7 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
-		private string MensagemDeNotificacaoAoCliente()
+		private string GetCustomerNotificationMessage()
 		{
 			return "Prezados, é necessário acionar a loja para a liberação de acesso do(s) técnico(s) abaixo. Ainda não foi repassada a previsão de chegada; assim que a obtivermos, atualizaremos a thread."
 				+ Environment.NewLine + Environment.NewLine
@@ -19,7 +19,7 @@ namespace NOC_Actions
 		
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			Clipboard.SetText(msn);
 			richTextBox1_DadosTecnicos.Text = "";
 		}
@@ -35,7 +35,7 @@ namespace NOC_Actions
 		
 		void BtnPreviaDaMensagemClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			MessageBox.Show(msn, "Prévia da Mensagem");
 		}
 	}

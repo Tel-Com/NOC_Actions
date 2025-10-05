@@ -10,7 +10,7 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
-		private string MensagemDeNotificacaoAoCliente()
+		private string GetCustomerNotificationMessage()
 		{
 			string getDadosTecnicos = richTextBox1_DadosTecnicos.Text.Trim();
 			string getPrevisaoChegada = textBox1_PrevisaoChegada.Text.Trim();
@@ -19,14 +19,12 @@ namespace NOC_Actions
 				"Previsão de chegada às " + getPrevisaoChegada + ". Seguem os dados dos técnicos responsáveis pela solução do problema:" +
 				Environment.NewLine + Environment.NewLine +
 				getDadosTecnicos;
-
 		}
 		
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			Clipboard.SetText(msn);
-			
 			richTextBox1_DadosTecnicos.Text = "";
 			textBox1_PrevisaoChegada.Text = "";
 		}
@@ -64,8 +62,7 @@ namespace NOC_Actions
 				                MessageBoxIcon.Warning);
 				return;
 			}
-
-			string previa = MensagemDeNotificacaoAoCliente();
+			string previa = GetCustomerNotificationMessage();
 			PreviaDaMensagem(previa);
 		}
 	}

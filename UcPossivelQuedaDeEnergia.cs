@@ -10,7 +10,7 @@ namespace NOC_Actions
 			InitializeComponent();
 		}
 		
-		private string MensagemDeNotificacaoAoCliente()
+		private string GetCustomerNotificationMessage()
 		{
 			string getValueUnidadeComQueda = textBox1_UnidadeQueda.Text.Trim();
 			return "Prezados, poderiam confirmar possível queda de energia na loja "
@@ -18,7 +18,7 @@ namespace NOC_Actions
 		}
 		void BtnGravarECopiarClick(object sender, EventArgs e)
 		{
-			string msn = MensagemDeNotificacaoAoCliente();
+			string msn = GetCustomerNotificationMessage();
 			Clipboard.SetText(msn);
 			textBox1_UnidadeQueda.Text = "";
 		}

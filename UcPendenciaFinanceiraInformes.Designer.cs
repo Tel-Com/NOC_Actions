@@ -17,13 +17,13 @@ namespace NOC_Actions
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox textBox1_UnidadeComBloqueioFinanceiro;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button btnGravarECopiar;
+		private System.Windows.Forms.Button btnSaveAndCopy;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Button btnApagarCampos;
+		private System.Windows.Forms.Button btnClearFields;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btnFecharJanela;
-		private System.Windows.Forms.Button btnDetalharFatura;
+		private System.Windows.Forms.Button btnCloseWindow;
+		private System.Windows.Forms.Button btnViewInvoiceDetails;
 		
 		/// <summary>
 		/// Disposes resources used by the control.
@@ -49,13 +49,13 @@ namespace NOC_Actions
 			this.label6 = new System.Windows.Forms.Label();
 			this.textBox1_UnidadeComBloqueioFinanceiro = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.btnGravarECopiar = new System.Windows.Forms.Button();
+			this.btnSaveAndCopy = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
-			this.btnApagarCampos = new System.Windows.Forms.Button();
+			this.btnClearFields = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.btnFecharJanela = new System.Windows.Forms.Button();
-			this.btnDetalharFatura = new System.Windows.Forms.Button();
+			this.btnCloseWindow = new System.Windows.Forms.Button();
+			this.btnViewInvoiceDetails = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label6
@@ -84,15 +84,15 @@ namespace NOC_Actions
 			this.label5.TabIndex = 31;
 			this.label5.Text = "________________________________________________________________";
 			// 
-			// btnGravarECopiar
+			// btnSaveAndCopy
 			// 
-			this.btnGravarECopiar.Location = new System.Drawing.Point(357, 315);
-			this.btnGravarECopiar.Name = "btnGravarECopiar";
-			this.btnGravarECopiar.Size = new System.Drawing.Size(96, 44);
-			this.btnGravarECopiar.TabIndex = 29;
-			this.btnGravarECopiar.Text = "Gravar e Copiar";
-			this.btnGravarECopiar.UseVisualStyleBackColor = true;
-			this.btnGravarECopiar.Click += new System.EventHandler(this.BtnGravarECopiarClick);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
+			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(96, 44);
+			this.btnSaveAndCopy.TabIndex = 29;
+			this.btnSaveAndCopy.Text = "Gravar e Copiar";
+			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
+			this.btnSaveAndCopy.Click += new System.EventHandler(this.BtnGravarECopiarClick);
 			// 
 			// label4
 			// 
@@ -104,15 +104,15 @@ namespace NOC_Actions
 			this.label4.TabIndex = 28;
 			this.label4.Text = "Mensagem a ser exibida";
 			// 
-			// btnApagarCampos
+			// btnClearFields
 			// 
-			this.btnApagarCampos.Location = new System.Drawing.Point(255, 315);
-			this.btnApagarCampos.Name = "btnApagarCampos";
-			this.btnApagarCampos.Size = new System.Drawing.Size(96, 44);
-			this.btnApagarCampos.TabIndex = 27;
-			this.btnApagarCampos.Text = "Apagar";
-			this.btnApagarCampos.UseVisualStyleBackColor = true;
-			this.btnApagarCampos.Click += new System.EventHandler(this.BtnApagarCamposClick);
+			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
+			this.btnClearFields.Name = "btnClearFields";
+			this.btnClearFields.Size = new System.Drawing.Size(96, 44);
+			this.btnClearFields.TabIndex = 27;
+			this.btnClearFields.Text = "Apagar";
+			this.btnClearFields.UseVisualStyleBackColor = true;
+			this.btnClearFields.Click += new System.EventHandler(this.BtnApagarCamposClick);
 			// 
 			// label1
 			// 
@@ -134,38 +134,38 @@ namespace NOC_Actions
 			this.label2.Text = "Você pode escolher \"detalhar\" para aprimorar e adicionar informações referente ao" +
 	" Bloqueio Financeiro no respectivo contrato.";
 			// 
-			// btnFecharJanela
+			// btnCloseWindow
 			// 
-			this.btnFecharJanela.Location = new System.Drawing.Point(34, 315);
-			this.btnFecharJanela.Name = "btnFecharJanela";
-			this.btnFecharJanela.Size = new System.Drawing.Size(96, 44);
-			this.btnFecharJanela.TabIndex = 39;
-			this.btnFecharJanela.Text = "Fechar";
-			this.btnFecharJanela.UseVisualStyleBackColor = true;
-			this.btnFecharJanela.Click += new System.EventHandler(this.BtnFecharJanelaClick);
+			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
+			this.btnCloseWindow.Name = "btnCloseWindow";
+			this.btnCloseWindow.Size = new System.Drawing.Size(96, 44);
+			this.btnCloseWindow.TabIndex = 39;
+			this.btnCloseWindow.Text = "Fechar";
+			this.btnCloseWindow.UseVisualStyleBackColor = true;
+			this.btnCloseWindow.Click += new System.EventHandler(this.BtnFecharJanelaClick);
 			// 
-			// btnDetalharFatura
+			// btnViewInvoiceDetails
 			// 
-			this.btnDetalharFatura.Enabled = false;
-			this.btnDetalharFatura.Location = new System.Drawing.Point(153, 315);
-			this.btnDetalharFatura.Name = "btnDetalharFatura";
-			this.btnDetalharFatura.Size = new System.Drawing.Size(96, 44);
-			this.btnDetalharFatura.TabIndex = 40;
-			this.btnDetalharFatura.Text = "Detalhar ...";
-			this.btnDetalharFatura.UseVisualStyleBackColor = true;
-			this.btnDetalharFatura.Click += new System.EventHandler(this.BtnDetalharFaturaClick);
+			this.btnViewInvoiceDetails.Enabled = false;
+			this.btnViewInvoiceDetails.Location = new System.Drawing.Point(153, 315);
+			this.btnViewInvoiceDetails.Name = "btnViewInvoiceDetails";
+			this.btnViewInvoiceDetails.Size = new System.Drawing.Size(96, 44);
+			this.btnViewInvoiceDetails.TabIndex = 40;
+			this.btnViewInvoiceDetails.Text = "Detalhar ...";
+			this.btnViewInvoiceDetails.UseVisualStyleBackColor = true;
+			this.btnViewInvoiceDetails.Click += new System.EventHandler(this.BtnDetalharFaturaClick);
 			// 
 			// UcPendenciaFinanceiraInformes
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.btnDetalharFatura);
-			this.Controls.Add(this.btnFecharJanela);
+			this.Controls.Add(this.btnViewInvoiceDetails);
+			this.Controls.Add(this.btnCloseWindow);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.textBox1_UnidadeComBloqueioFinanceiro);
-			this.Controls.Add(this.btnGravarECopiar);
+			this.Controls.Add(this.btnSaveAndCopy);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.btnApagarCampos);
+			this.Controls.Add(this.btnClearFields);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label5);

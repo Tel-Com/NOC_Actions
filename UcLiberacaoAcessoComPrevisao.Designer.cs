@@ -15,17 +15,17 @@ namespace NOC_Actions
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button btnGravarECopiar;
+		private System.Windows.Forms.Button btnSaveAndCopy;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btnApagarCampos;
+		private System.Windows.Forms.Button btnClearFields;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.RichTextBox richTextBox1_DadosTecnicos;
 		private System.Windows.Forms.TextBox textBox1_PrevisaoChegada;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button btnFecharJanela;
-		private System.Windows.Forms.Button btnPreviaDaMensagem;
+		private System.Windows.Forms.Button btnCloseWindow;
+		private System.Windows.Forms.Button btnPreviewMessage;
 		
 		/// <summary>
 		/// Disposes resources used by the control.
@@ -48,9 +48,9 @@ namespace NOC_Actions
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btnGravarECopiar = new System.Windows.Forms.Button();
+			this.btnSaveAndCopy = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
-			this.btnApagarCampos = new System.Windows.Forms.Button();
+			this.btnClearFields = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.richTextBox1_DadosTecnicos = new System.Windows.Forms.RichTextBox();
@@ -58,20 +58,20 @@ namespace NOC_Actions
 			this.label2 = new System.Windows.Forms.Label();
 			this.textBox1_PrevisaoChegada = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.btnFecharJanela = new System.Windows.Forms.Button();
-			this.btnPreviaDaMensagem = new System.Windows.Forms.Button();
+			this.btnCloseWindow = new System.Windows.Forms.Button();
+			this.btnPreviewMessage = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// btnGravarECopiar
+			// btnSaveAndCopy
 			// 
-			this.btnGravarECopiar.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-			this.btnGravarECopiar.Location = new System.Drawing.Point(339, 316);
-			this.btnGravarECopiar.Name = "btnGravarECopiar";
-			this.btnGravarECopiar.Size = new System.Drawing.Size(114, 33);
-			this.btnGravarECopiar.TabIndex = 16;
-			this.btnGravarECopiar.Text = "Gravar e Copiar";
-			this.btnGravarECopiar.UseVisualStyleBackColor = true;
-			this.btnGravarECopiar.Click += new System.EventHandler(this.BtnGravarECopiarClick);
+			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(339, 316);
+			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(114, 33);
+			this.btnSaveAndCopy.TabIndex = 16;
+			this.btnSaveAndCopy.Text = "Gravar e Copiar";
+			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
+			this.btnSaveAndCopy.Click += new System.EventHandler(this.BtnGravarECopiarClick);
 			// 
 			// label4
 			// 
@@ -83,15 +83,15 @@ namespace NOC_Actions
 			this.label4.TabIndex = 15;
 			this.label4.Text = "Mensagem a ser exibida";
 			// 
-			// btnApagarCampos
+			// btnClearFields
 			// 
-			this.btnApagarCampos.Location = new System.Drawing.Point(219, 316);
-			this.btnApagarCampos.Name = "btnApagarCampos";
-			this.btnApagarCampos.Size = new System.Drawing.Size(114, 33);
-			this.btnApagarCampos.TabIndex = 10;
-			this.btnApagarCampos.Text = "Apagar";
-			this.btnApagarCampos.UseVisualStyleBackColor = true;
-			this.btnApagarCampos.Click += new System.EventHandler(this.BtnApagarCamposClick);
+			this.btnClearFields.Location = new System.Drawing.Point(219, 316);
+			this.btnClearFields.Name = "btnClearFields";
+			this.btnClearFields.Size = new System.Drawing.Size(114, 33);
+			this.btnClearFields.TabIndex = 10;
+			this.btnClearFields.Text = "Apagar";
+			this.btnClearFields.UseVisualStyleBackColor = true;
+			this.btnClearFields.Click += new System.EventHandler(this.BtnApagarCamposClick);
 			// 
 			// label1
 			// 
@@ -155,42 +155,42 @@ namespace NOC_Actions
 			this.label6.TabIndex = 25;
 			this.label6.Text = "Previsão de Chagada";
 			// 
-			// btnFecharJanela
+			// btnCloseWindow
 			// 
-			this.btnFecharJanela.Location = new System.Drawing.Point(39, 316);
-			this.btnFecharJanela.Name = "btnFecharJanela";
-			this.btnFecharJanela.Size = new System.Drawing.Size(60, 33);
-			this.btnFecharJanela.TabIndex = 26;
-			this.btnFecharJanela.Text = "Fechar";
-			this.btnFecharJanela.UseVisualStyleBackColor = true;
-			this.btnFecharJanela.Click += new System.EventHandler(this.BtnFecharJanelaClick);
+			this.btnCloseWindow.Location = new System.Drawing.Point(39, 316);
+			this.btnCloseWindow.Name = "btnCloseWindow";
+			this.btnCloseWindow.Size = new System.Drawing.Size(60, 33);
+			this.btnCloseWindow.TabIndex = 26;
+			this.btnCloseWindow.Text = "Fechar";
+			this.btnCloseWindow.UseVisualStyleBackColor = true;
+			this.btnCloseWindow.Click += new System.EventHandler(this.BtnFecharJanelaClick);
 			// 
-			// btnPreviaDaMensagem
+			// btnPreviewMessage
 			// 
-			this.btnPreviaDaMensagem.Location = new System.Drawing.Point(122, 316);
-			this.btnPreviaDaMensagem.Name = "btnPreviaDaMensagem";
-			this.btnPreviaDaMensagem.Size = new System.Drawing.Size(91, 33);
-			this.btnPreviaDaMensagem.TabIndex = 27;
-			this.btnPreviaDaMensagem.Text = "Prévia";
-			this.btnPreviaDaMensagem.UseVisualStyleBackColor = true;
-			this.btnPreviaDaMensagem.Click += new System.EventHandler(this.BtnPreviaDaMensagemClick);
+			this.btnPreviewMessage.Location = new System.Drawing.Point(122, 316);
+			this.btnPreviewMessage.Name = "btnPreviewMessage";
+			this.btnPreviewMessage.Size = new System.Drawing.Size(91, 33);
+			this.btnPreviewMessage.TabIndex = 27;
+			this.btnPreviewMessage.Text = "Prévia";
+			this.btnPreviewMessage.UseVisualStyleBackColor = true;
+			this.btnPreviewMessage.Click += new System.EventHandler(this.BtnPreviaDaMensagemClick);
 			// 
 			// UcLiberacaoDeAcessoComPrevisao
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
-			this.Controls.Add(this.btnPreviaDaMensagem);
-			this.Controls.Add(this.btnFecharJanela);
+			this.Controls.Add(this.btnPreviewMessage);
+			this.Controls.Add(this.btnCloseWindow);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.textBox1_PrevisaoChegada);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.richTextBox1_DadosTecnicos);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.btnGravarECopiar);
+			this.Controls.Add(this.btnSaveAndCopy);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.btnApagarCampos);
+			this.Controls.Add(this.btnClearFields);
 			this.Controls.Add(this.label1);
 			this.Name = "UcLiberacaoDeAcessoComPrevisao";
 			this.Size = new System.Drawing.Size(470, 380);

@@ -23,7 +23,7 @@ namespace NOC_Actions
 			this.TopMost = true;
 			OrdenarTabIndex();
 
-		 PointerMouseMove.MouseDown += PointerMouseMovePaint_MouseDown;
+			PointerMouseMove.MouseDown += PointerMouseMovePaint_MouseDown;
 		}
 
 		private void PointerMouseMovePaint_MouseDown(object sender, MouseEventArgs e)
@@ -74,13 +74,15 @@ namespace NOC_Actions
 		// Método para organizar a ordem de tabulação dos elementos do formulário
 		private void OrdenarTabIndex()
 		{
-			SemEnergia.TabIndex = 0;
-			ButtonSemContatoLocal.TabIndex = 1;
-			ButtonSemExpediente.TabIndex = 2;
-			ButtonInfraOkCliente.TabIndex = 3;
-			ButtonSemContatoOperadora.TabIndex = 4;
+			btnAcessosEUtilitarios.TabIndex = 0;
+			btnInformesClientes.TabIndex = 1;
+			btnAberturaDeMassiva.TabIndex = 2;
+			SemEnergia.TabIndex = 3;
+			ButtonPosicionamentoTecnico.TabIndex = 4;
 			ButtonAberturaDeOs.TabIndex = 5;
-			ButtonPosicionamentoTecnico.TabIndex = 6;
+			ButtonInfraOkCliente.TabIndex = 6;
+			ButtonSemExpediente.TabIndex = 7;
+			ButtonSemContatoLocal.TabIndex =8;
 		}
 		void BtnAberturaDeMassivaClick(object sender, EventArgs e)
 		{

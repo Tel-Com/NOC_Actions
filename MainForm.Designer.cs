@@ -111,7 +111,7 @@ namespace NOC_Actions
 			this.ButtonSemContatoLocal.Location = new System.Drawing.Point(883, 0);
 			this.ButtonSemContatoLocal.Name = "ButtonSemContatoLocal";
 			this.ButtonSemContatoLocal.Size = new System.Drawing.Size(97, 46);
-			this.ButtonSemContatoLocal.TabIndex = 2;
+			this.ButtonSemContatoLocal.TabIndex = 9;
 			this.ButtonSemContatoLocal.Text = "Sem contato local";
 			this.ButtonSemContatoLocal.UseVisualStyleBackColor = true;
 			this.ButtonSemContatoLocal.Click += new System.EventHandler(this.ButtonSemContatoLocalClick);
@@ -123,7 +123,7 @@ namespace NOC_Actions
 			this.ButtonSemExpediente.Location = new System.Drawing.Point(786, 0);
 			this.ButtonSemExpediente.Name = "ButtonSemExpediente";
 			this.ButtonSemExpediente.Size = new System.Drawing.Size(97, 46);
-			this.ButtonSemExpediente.TabIndex = 3;
+			this.ButtonSemExpediente.TabIndex = 8;
 			this.ButtonSemExpediente.Text = "Sem expediente";
 			this.ButtonSemExpediente.UseVisualStyleBackColor = true;
 			this.ButtonSemExpediente.Click += new System.EventHandler(this.ButtonSemExpedienteClick);
@@ -135,7 +135,7 @@ namespace NOC_Actions
 			this.ButtonInfraOkCliente.Location = new System.Drawing.Point(689, 0);
 			this.ButtonInfraOkCliente.Name = "ButtonInfraOkCliente";
 			this.ButtonInfraOkCliente.Size = new System.Drawing.Size(97, 46);
-			this.ButtonInfraOkCliente.TabIndex = 4;
+			this.ButtonInfraOkCliente.TabIndex = 7;
 			this.ButtonInfraOkCliente.Text = "(Cliente) Infra OK";
 			this.ButtonInfraOkCliente.UseVisualStyleBackColor = true;
 			this.ButtonInfraOkCliente.Click += new System.EventHandler(this.ButtonInfraOkClienteClick);
@@ -147,7 +147,7 @@ namespace NOC_Actions
 			this.ButtonSemContatoOperadora.Location = new System.Drawing.Point(592, 0);
 			this.ButtonSemContatoOperadora.Name = "ButtonSemContatoOperadora";
 			this.ButtonSemContatoOperadora.Size = new System.Drawing.Size(97, 46);
-			this.ButtonSemContatoOperadora.TabIndex = 5;
+			this.ButtonSemContatoOperadora.TabIndex = 6;
 			this.ButtonSemContatoOperadora.Text = "Operadora não atende";
 			this.ButtonSemContatoOperadora.UseVisualStyleBackColor = true;
 			this.ButtonSemContatoOperadora.Click += new System.EventHandler(this.ButtonSemContatoOperadoraClick);
@@ -159,7 +159,7 @@ namespace NOC_Actions
 			this.ButtonAberturaDeOs.Location = new System.Drawing.Point(495, 0);
 			this.ButtonAberturaDeOs.Name = "ButtonAberturaDeOs";
 			this.ButtonAberturaDeOs.Size = new System.Drawing.Size(97, 46);
-			this.ButtonAberturaDeOs.TabIndex = 6;
+			this.ButtonAberturaDeOs.TabIndex = 5;
 			this.ButtonAberturaDeOs.Text = "Abertura de OS";
 			this.ButtonAberturaDeOs.UseVisualStyleBackColor = true;
 			this.ButtonAberturaDeOs.Click += new System.EventHandler(this.ButtonAberturaDeOsClick);
@@ -171,7 +171,7 @@ namespace NOC_Actions
 			this.ButtonPosicionamentoTecnico.Location = new System.Drawing.Point(398, 0);
 			this.ButtonPosicionamentoTecnico.Name = "ButtonPosicionamentoTecnico";
 			this.ButtonPosicionamentoTecnico.Size = new System.Drawing.Size(97, 46);
-			this.ButtonPosicionamentoTecnico.TabIndex = 7;
+			this.ButtonPosicionamentoTecnico.TabIndex = 4;
 			this.ButtonPosicionamentoTecnico.Text = "Posiciona. OS";
 			this.ButtonPosicionamentoTecnico.UseVisualStyleBackColor = true;
 			this.ButtonPosicionamentoTecnico.Click += new System.EventHandler(this.ButtonPosicionamentoTecnicoClick);
@@ -183,7 +183,7 @@ namespace NOC_Actions
 			this.SemEnergia.Location = new System.Drawing.Point(301, 0);
 			this.SemEnergia.Name = "SemEnergia";
 			this.SemEnergia.Size = new System.Drawing.Size(97, 46);
-			this.SemEnergia.TabIndex = 8;
+			this.SemEnergia.TabIndex = 3;
 			this.SemEnergia.Text = "Sem energia";
 			this.SemEnergia.UseVisualStyleBackColor = true;
 			this.SemEnergia.Click += new System.EventHandler(this.SemEnergiaClick);
@@ -195,7 +195,7 @@ namespace NOC_Actions
 			this.btnAberturaDeMassiva.Location = new System.Drawing.Point(204, 0);
 			this.btnAberturaDeMassiva.Name = "btnAberturaDeMassiva";
 			this.btnAberturaDeMassiva.Size = new System.Drawing.Size(97, 46);
-			this.btnAberturaDeMassiva.TabIndex = 11;
+			this.btnAberturaDeMassiva.TabIndex = 2;
 			this.btnAberturaDeMassiva.Text = "Massiva";
 			this.btnAberturaDeMassiva.UseVisualStyleBackColor = true;
 			this.btnAberturaDeMassiva.Click += new System.EventHandler(this.BtnAberturaDeMassivaClick);
@@ -207,7 +207,7 @@ namespace NOC_Actions
 			this.btnInformesClientes.Location = new System.Drawing.Point(107, 0);
 			this.btnInformesClientes.Name = "btnInformesClientes";
 			this.btnInformesClientes.Size = new System.Drawing.Size(97, 46);
-			this.btnInformesClientes.TabIndex = 12;
+			this.btnInformesClientes.TabIndex = 1;
 			this.btnInformesClientes.Text = "Informes";
 			this.btnInformesClientes.UseVisualStyleBackColor = true;
 			this.btnInformesClientes.Click += new System.EventHandler(this.BtnInformesClientesClick);
@@ -219,7 +219,7 @@ namespace NOC_Actions
 			this.btnAcessosEUtilitarios.Location = new System.Drawing.Point(10, 0);
 			this.btnAcessosEUtilitarios.Name = "btnAcessosEUtilitarios";
 			this.btnAcessosEUtilitarios.Size = new System.Drawing.Size(97, 46);
-			this.btnAcessosEUtilitarios.TabIndex = 13;
+			this.btnAcessosEUtilitarios.TabIndex = 0;
 			this.btnAcessosEUtilitarios.Text = "Utilitários";
 			this.btnAcessosEUtilitarios.UseVisualStyleBackColor = true;
 			this.btnAcessosEUtilitarios.Click += new System.EventHandler(this.BtnAcessosEUtilitariosClick);

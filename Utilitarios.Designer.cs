@@ -52,6 +52,7 @@ namespace NOC_Actions
 			this.richTextBox_TextoUtilitario.Size = new System.Drawing.Size(644, 563);
 			this.richTextBox_TextoUtilitario.TabIndex = 0;
 			this.richTextBox_TextoUtilitario.Text = "";
+//			this.richTextBox_TextoUtilitario.TextChanged += new System.EventHandler(this.RichTextBox_TextoUtilitarioTextChanged);
 			// 
 			// label1
 			// 

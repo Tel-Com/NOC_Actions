@@ -18,19 +18,24 @@ Senha: ASSO712SA
 JSL BERO e MCW
 Como estamos dependente do cliente, vamos cobrar 1x no dia apenas. Cobramos hj pra ver se tem atualização e depois só segunda. Duvido muito que amanhã ou sexta tenha avanço.
 
-Mas qnd forem questionar os responsáveis, já aproveitem para perguntar se sexta irão trabalhar ou se eles acham que devem ter algum avanço só na segunda msm devido feriado.
+Mas qnd forem questionar os responsáveis, já aproveitem para perguntar se sexta irão trabalhar ou se eles acham que devem ter algum avanço só na segunda msm devido feriado. 
 
-_______
+_____________________
 
-Não abrir chamado para os casos:
+*Não abrir chamado para os casos:*
 Movida - MGA/IP/01405: Histórico de dying gasp.
 Movida - LDA/IP/02132: Necessário avaliação da infra local, reincidência na operadora de chamados.
 Movida - RJO/IP/40762: Necessário reboot no modem antes de abrir chamado. Equipamento esta travando.
 Movida: SLS/IP/08581: Histórico de dying gasp.
 Movida: BEX/IP/00239: Histórico de dying gasp.
 Movida - CTA-0798269: Box geralmente com equipamentos desligados devido demanda da loja
+*Movida - MCL/IP/02066: Link com histórico de desconexão. Possível falha na infra.*
+*JSL - GNA/IP/06332: Local com histórico de falhas no no-break*
 JSL - HORT/IP/01768: Local com histórico de falha na infra. No-break super aquecendo, equipamentos reiniciando.
 JSL - CBA/IP/04834: Responsável desconecta o link da Claro com frequência.
 JSL - OCO/IP/05656: Histórico de dying gasp.
 
 relacionamentoempresas.br@vivo.com.br
+
+CNPJ PARA PASSAR NA URA (WHATSAPP) DA TERACORP: 06347409033926
+

@@ -1,8 +1,1 @@
-﻿adicionado engrenagem para configuracao interna no form UcDetalharFaturaDoCliente.cs;  
-adicionado textBox para Operadora
-Corrigido a semantica da variavel detalheFatura do UcDetalheFaturaDoCliente.cs
-criado BtnConfigFormClick para abrir o usercontrol Config_UcDetalharFaturaDoCliente; objetivo este para editar os campos e outras informações necessárias
-Retirado alguns comentários automáticos do Config_UcDetalhar
-Ativado o BtnConfigFormClick para que o usuário possa editar as configurações
-BtnConfigFormClick responsável por abrir o Config_UcDetalhar
-adicionado button Mensagem Eletrônica (BtnMensagemEletrônicaClick()) (projeto não definido ainda)
+﻿

@@ -7,6 +7,7 @@ namespace NOC_Actions
 {
 	public partial class UcAlarmeDeLinkIndisponivel : UserControl
 	{
+		
 		public UcAlarmeDeLinkIndisponivel()
 		{
 			InitializeComponent();

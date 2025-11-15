@@ -22,7 +22,7 @@ namespace NOC_Actions
 		
 		private string GetCustomerNotificationMessage()
 		{
-			return "Prezados, informamos que foi identificado um bloqueio de natureza administrativo-financeira no contrato da unidade: " + Environment.NewLine + Environment.NewLine + txtFinBlockUnitName.Text.Trim();
+			return "Prezados, informamos que foi identificado um bloqueio de natureza administrativo-financeira no contrato da unidade: " + txtFinBlockUnitName.Text.Trim();
 		}
 
 		void BtnCloseWindowClick(object sender, EventArgs e)

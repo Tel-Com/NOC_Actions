@@ -16,6 +16,8 @@ namespace NOC_Actions
 		public Config_UcDetalharFaturaDoCliente()
 		{
 			InitializeComponent();
+			
+			CarregarUnidadeClienteSalva();
 			CarregarOperadoraSalva();
 			CarregarStatusDoContratoSalvo();
 		}
@@ -27,6 +29,11 @@ namespace NOC_Actions
 			this.Controls.Add(uc);
 		}
 		
+		void BtnSalvarUnidadeClienteClick(object sender, EventArgs e)
+		{
+			SalvarItensNoArquivo_UnidadeCliente();
+		}
+		
 		void BtnSalvarOperadoraClick(object sender, EventArgs e)
 		{
 			SalvarItensNoArquivo_Operadora();
@@ -35,6 +42,16 @@ namespace NOC_Actions
 		void BtnSalvarStatusDoContratoClick(object sender, EventArgs e)
 		{
 			SalvarItensNoArquivo_StatusDoContrato();
+		}
+		
+		private void SalvarItensNoArquivo_UnidadeCliente()
+		{
+			string adicionarClienteUnidadeEmLista = comboBox_UnidadeCliente.Text.Trim();
+			if (!string.IsNullOrWhiteSpace(adicionarClienteUnidadeEmLista) && !comboBox_UnidadeCliente.Items.Contains(adicionarClienteUnidadeEmLista)) {
+				comboBox_UnidadeCliente.Items.Add(adicionarClienteUnidadeEmLista);
+				comboBox_UnidadeCliente.Text = "";
+				RegistrarNoArquivo(comboBox_UnidadeCliente, caminhoArquivoUnidadeCliente);
+			}
 		}
 		
 		private void SalvarItensNoArquivo_Operadora()
@@ -69,6 +86,15 @@ namespace NOC_Actions
 				File.WriteAllLines(caminhoArquivo, comboBox.Items.Cast<string>());
 			} catch (Exception ex) {
 				MessageBox.Show("Erro ao realizar este procedimento. \n\n" + ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+		
+		private void CarregarUnidadeClienteSalva()
+		{
+			if (File.Exists(caminhoArquivoUnidadeCliente))
+			{
+				string[] unidadeCliente = File.ReadAllLines(caminhoArquivoUnidadeCliente);
+				comboBox_UnidadeCliente.Items.AddRange(unidadeCliente);
 			}
 		}
 		

@@ -15,6 +15,7 @@
 		private System.Windows.Forms.Button btnSalvarUnidadeCliente;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.ComboBox comboBox_UnidadeCliente;
+		private System.Windows.Forms.Button btnVerRegistros;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -40,6 +41,7 @@
 			this.btnSalvarUnidadeCliente = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.comboBox_UnidadeCliente = new System.Windows.Forms.ComboBox();
+			this.btnVerRegistros = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnVoltar
@@ -147,6 +149,7 @@
 			this.btnSalvarUnidadeCliente.TabIndex = 38;
 			this.btnSalvarUnidadeCliente.Text = "Salvar";
 			this.btnSalvarUnidadeCliente.UseVisualStyleBackColor = true;
+			this.btnSalvarUnidadeCliente.Click += new System.EventHandler(this.BtnSalvarUnidadeClienteClick);
 			// 
 			// label3
 			// 
@@ -169,10 +172,21 @@
 			this.comboBox_UnidadeCliente.Size = new System.Drawing.Size(228, 25);
 			this.comboBox_UnidadeCliente.TabIndex = 36;
 			// 
+			// btnVerRegistros
+			// 
+			this.btnVerRegistros.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnVerRegistros.Location = new System.Drawing.Point(203, 326);
+			this.btnVerRegistros.Name = "btnVerRegistros";
+			this.btnVerRegistros.Size = new System.Drawing.Size(157, 44);
+			this.btnVerRegistros.TabIndex = 39;
+			this.btnVerRegistros.Text = "Mostrar Registros";
+			this.btnVerRegistros.UseVisualStyleBackColor = true;
+			// 
 			// Config_UcDetalharFaturaDoCliente
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnVerRegistros);
 			this.Controls.Add(this.btnSalvarUnidadeCliente);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.comboBox_UnidadeCliente);

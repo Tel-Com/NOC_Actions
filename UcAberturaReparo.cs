@@ -16,7 +16,7 @@ namespace NOC_Actions
 		{
 			string getNumeroChamado = txtOperatorCallID.Text.Trim();
 			string getHorarioDeRegistro = textBoxCallRegistrationTime.Text.Trim();
-			return "Prezados, chamado " + getNumeroChamado + " registrado às " + getHorarioDeRegistro + " junto ao fornecedor.";
+			return "Prezados, o chamado " + getNumeroChamado + " foi registrado às " + getHorarioDeRegistro + " junto ao fornecedor.";
 		}
 		
 		void BtnCloseWindowClick(object sender, EventArgs e)

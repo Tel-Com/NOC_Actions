@@ -46,6 +46,7 @@ namespace NOC_Actions
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcLiberacaoDeAcessoSemPrevisao));
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnSaveAndCopy = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
@@ -70,9 +71,9 @@ namespace NOC_Actions
 			// btnSaveAndCopy
 			// 
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnSaveAndCopy.Location = new System.Drawing.Point(339, 316);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
-			this.btnSaveAndCopy.Size = new System.Drawing.Size(114, 33);
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(96, 44);
 			this.btnSaveAndCopy.TabIndex = 1;
 			this.btnSaveAndCopy.Text = "Gravar e Copiar";
 			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
@@ -101,9 +102,9 @@ namespace NOC_Actions
 			// btnClearFields
 			// 
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnClearFields.Location = new System.Drawing.Point(219, 316);
+			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
-			this.btnClearFields.Size = new System.Drawing.Size(114, 33);
+			this.btnClearFields.Size = new System.Drawing.Size(96, 44);
 			this.btnClearFields.TabIndex = 2;
 			this.btnClearFields.Text = "Apagar";
 			this.btnClearFields.UseVisualStyleBackColor = true;
@@ -111,15 +112,12 @@ namespace NOC_Actions
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.label1.Location = new System.Drawing.Point(3, 22);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(465, 51);
 			this.label1.TabIndex = 9;
-			this.label1.Text = "Prezados, necessário acionamento com a loja para liberação de acesso do(s) \r\ntécn" +
-	"ico(s) abaixo. Ainda não foi repassado previsão de chegada, assim que \r\nobtiverm" +
-	"os iremos atualizar a thread.";
+			this.label1.Text = resources.GetString("label1.Text");
 			// 
 			// richTextBoxTechDetails
 			// 
@@ -143,9 +141,9 @@ namespace NOC_Actions
 			// btnCloseWindow
 			// 
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnCloseWindow.Location = new System.Drawing.Point(39, 316);
+			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
-			this.btnCloseWindow.Size = new System.Drawing.Size(60, 33);
+			this.btnCloseWindow.Size = new System.Drawing.Size(96, 44);
 			this.btnCloseWindow.TabIndex = 4;
 			this.btnCloseWindow.Text = "Fechar";
 			this.btnCloseWindow.UseVisualStyleBackColor = true;
@@ -154,9 +152,9 @@ namespace NOC_Actions
 			// btnMessagePreview
 			// 
 			this.btnMessagePreview.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnMessagePreview.Location = new System.Drawing.Point(122, 316);
+			this.btnMessagePreview.Location = new System.Drawing.Point(153, 315);
 			this.btnMessagePreview.Name = "btnMessagePreview";
-			this.btnMessagePreview.Size = new System.Drawing.Size(91, 33);
+			this.btnMessagePreview.Size = new System.Drawing.Size(96, 44);
 			this.btnMessagePreview.TabIndex = 3;
 			this.btnMessagePreview.Text = "Prévia";
 			this.btnMessagePreview.UseVisualStyleBackColor = true;

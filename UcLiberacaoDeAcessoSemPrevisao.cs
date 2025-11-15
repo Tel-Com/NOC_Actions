@@ -12,7 +12,7 @@ namespace NOC_Actions
 		
 		private string GetCustomerNotificationMessage()
 		{
-			return "Prezados, é necessário acionar a loja para a liberação de acesso do(s) técnico(s) abaixo. Ainda não foi repassada a previsão de chegada; assim que a obtivermos, atualizaremos a thread."
+			return "Prezados, é necessário acionar a loja para a liberação de acesso do(s) técnico(s) listados abaixo. Ainda não recebemos a previsão de chegada; assim que obtivermos essa informação, atualizaremos a thread."
 				+ Environment.NewLine + Environment.NewLine
 				+ richTextBoxTechDetails.Text;
 		}

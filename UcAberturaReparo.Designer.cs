@@ -24,6 +24,7 @@ namespace NOC_Actions
 		private System.Windows.Forms.Button btnClearFields;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnCloseWindow;
+		private System.Windows.Forms.Button btnPreviaMsn;
 		
 		/// <summary>
 		/// Disposes resources used by the control.
@@ -56,6 +57,7 @@ namespace NOC_Actions
 			this.btnClearFields = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnCloseWindow = new System.Windows.Forms.Button();
+			this.btnPreviaMsn = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label5
@@ -70,9 +72,9 @@ namespace NOC_Actions
 			// btnSaveAndCopy
 			// 
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnSaveAndCopy.Location = new System.Drawing.Point(339, 316);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
-			this.btnSaveAndCopy.Size = new System.Drawing.Size(114, 33);
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(96, 44);
 			this.btnSaveAndCopy.TabIndex = 2;
 			this.btnSaveAndCopy.Text = "Gravar e Copiar";
 			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
@@ -126,9 +128,9 @@ namespace NOC_Actions
 			// btnClearFields
 			// 
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnClearFields.Location = new System.Drawing.Point(219, 316);
+			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
-			this.btnClearFields.Size = new System.Drawing.Size(114, 33);
+			this.btnClearFields.Size = new System.Drawing.Size(96, 44);
 			this.btnClearFields.TabIndex = 3;
 			this.btnClearFields.Text = "Apagar";
 			this.btnClearFields.UseVisualStyleBackColor = true;
@@ -141,23 +143,34 @@ namespace NOC_Actions
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(464, 35);
 			this.label1.TabIndex = 9;
-			this.label1.Text = "\t\tPrezados, chamado ___ registrado as ___ (hh:mm) junto ao fornecedor.";
+			this.label1.Text = "Prezados, o chamado ___ foi registrado às ___ (hh:mm) junto ao fornecedor.";
 			// 
 			// btnCloseWindow
 			// 
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnCloseWindow.Location = new System.Drawing.Point(44, 317);
+			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
-			this.btnCloseWindow.Size = new System.Drawing.Size(114, 33);
+			this.btnCloseWindow.Size = new System.Drawing.Size(96, 44);
 			this.btnCloseWindow.TabIndex = 4;
 			this.btnCloseWindow.Text = "Fechar";
 			this.btnCloseWindow.UseVisualStyleBackColor = true;
 			this.btnCloseWindow.Click += new System.EventHandler(this.BtnCloseWindowClick);
 			// 
+			// btnPreviaMsn
+			// 
+			this.btnPreviaMsn.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnPreviaMsn.Location = new System.Drawing.Point(153, 315);
+			this.btnPreviaMsn.Name = "btnPreviaMsn";
+			this.btnPreviaMsn.Size = new System.Drawing.Size(96, 44);
+			this.btnPreviaMsn.TabIndex = 18;
+			this.btnPreviaMsn.Text = "Prévia";
+			this.btnPreviaMsn.UseVisualStyleBackColor = true;
+			// 
 			// UcAberturaDeReparo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnPreviaMsn);
 			this.Controls.Add(this.btnCloseWindow);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.btnSaveAndCopy);

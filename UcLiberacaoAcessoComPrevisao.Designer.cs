@@ -65,9 +65,9 @@ namespace NOC_Actions
 			// btnSaveAndCopy
 			// 
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnSaveAndCopy.Location = new System.Drawing.Point(339, 316);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
-			this.btnSaveAndCopy.Size = new System.Drawing.Size(114, 33);
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(96, 44);
 			this.btnSaveAndCopy.TabIndex = 2;
 			this.btnSaveAndCopy.Text = "Gravar e Copiar";
 			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@ namespace NOC_Actions
 			// btnClearFields
 			// 
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnClearFields.Location = new System.Drawing.Point(219, 316);
+			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
-			this.btnClearFields.Size = new System.Drawing.Size(114, 33);
+			this.btnClearFields.Size = new System.Drawing.Size(96, 44);
 			this.btnClearFields.TabIndex = 3;
 			this.btnClearFields.Text = "Apagar";
 			this.btnClearFields.UseVisualStyleBackColor = true;
@@ -163,9 +163,9 @@ namespace NOC_Actions
 			// btnCloseWindow
 			// 
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnCloseWindow.Location = new System.Drawing.Point(39, 316);
+			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
-			this.btnCloseWindow.Size = new System.Drawing.Size(60, 33);
+			this.btnCloseWindow.Size = new System.Drawing.Size(96, 44);
 			this.btnCloseWindow.TabIndex = 5;
 			this.btnCloseWindow.Text = "Fechar";
 			this.btnCloseWindow.UseVisualStyleBackColor = true;
@@ -174,9 +174,9 @@ namespace NOC_Actions
 			// btnPreviewMessage
 			// 
 			this.btnPreviewMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnPreviewMessage.Location = new System.Drawing.Point(122, 316);
+			this.btnPreviewMessage.Location = new System.Drawing.Point(153, 315);
 			this.btnPreviewMessage.Name = "btnPreviewMessage";
-			this.btnPreviewMessage.Size = new System.Drawing.Size(91, 33);
+			this.btnPreviewMessage.Size = new System.Drawing.Size(96, 44);
 			this.btnPreviewMessage.TabIndex = 4;
 			this.btnPreviewMessage.Text = "Prévia";
 			this.btnPreviewMessage.UseVisualStyleBackColor = true;

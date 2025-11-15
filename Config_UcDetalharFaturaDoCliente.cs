@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 using System.Linq;
@@ -57,7 +55,8 @@ namespace NOC_Actions
 		private void SalvarItensNoArquivo_Operadora()
 		{
 			string adicionarOperadoraEmLista = comboBox_OperadoraDoContrato.Text.Trim();
-			if(!string.IsNullOrWhiteSpace(adicionarOperadoraEmLista) && !comboBox_OperadoraDoContrato.Items.Contains(adicionarOperadoraEmLista) )
+			
+			if(!string.IsNullOrWhiteSpace(adicionarOperadoraEmLista) && !comboBox_OperadoraDoContrato.Items.Contains(adicionarOperadoraEmLista))
 			{
 				comboBox_OperadoraDoContrato.Items.Add(adicionarOperadoraEmLista);
 				comboBox_OperadoraDoContrato.Text = "";

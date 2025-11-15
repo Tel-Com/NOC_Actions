@@ -21,6 +21,18 @@ namespace NOC_Actions
 			this.Controls.Add(uc);
 		}
 		
+		private string ObterSaudacao()
+		{
+			int hora = DateTime.Now.Hour;
+			
+			if (hora >= 5 && hora < 12)
+				return "bom dia";
+			else if (hora >= 12 && hora < 18)
+				return "boa tarde";
+			else
+				return "boa noite";
+		}
+		
 		private bool AnaliseDeCamposVazios()
 		{
 			if (string.IsNullOrWhiteSpace(comboBox_UnidadeASerNotificada.Text) &&
@@ -43,15 +55,15 @@ namespace NOC_Actions
 				return string.Empty;
 			}
 			
-			string msn = "Prezados, informamos que foi identificado um bloqueio de natureza administrativo-financeira no contrato da unidade " +comboBox_UnidadeASerNotificada.Text.ToUpper()+"." +Environment.NewLine +"Seguem abaixo os detalhes." +Environment.NewLine +Environment.NewLine;
+			string msn = "Prezados, " + ObterSaudacao() + "! Informamos que foi identificado um bloqueio de caráter administrativo-financeiro no contrato da unidade. " +comboBox_UnidadeASerNotificada.Text.ToUpper()+"." +Environment.NewLine +"Seguem, a seguir, os detalhes referentes à situação." +Environment.NewLine +Environment.NewLine;
 			
 			string detalheFatura =
 				"Operadora: " + textBox_TipoDeOperadoraDoContrato.Text + Environment.NewLine +
-				"Valor: " + maskedTextBox_ValorDaFatura.Text + Environment.NewLine +
-				"Vencimento: " + maskedTextBox_VencimentoFatura.Text + Environment.NewLine +
-				"Código de pagamento: " + textBox_CodigoDeBarrasDaFatura.Text + Environment.NewLine +
-				"Status da Fatura: " + textBox_StatusDaFatura.Text + Environment.NewLine +
-				"Observação: " + richTextBox_ObservacaoDaFatura.Text;
+				"Valor da Fatura: " + maskedTextBox_ValorDaFatura.Text + Environment.NewLine +
+				"Data de Vencimento: " + maskedTextBox_VencimentoFatura.Text + Environment.NewLine +
+				"Código de Pagamento: " + textBox_CodigoDeBarrasDaFatura.Text + Environment.NewLine +
+				"Status: " + textBox_StatusDaFatura.Text + Environment.NewLine +
+				"Observações: " + richTextBox_ObservacaoDaFatura.Text;
 
 			return msn + detalheFatura;
 		}

@@ -205,7 +205,7 @@
 			this.btnAnexar.Name = "btnAnexar";
 			this.btnAnexar.Size = new System.Drawing.Size(96, 44);
 			this.btnAnexar.TabIndex = 16;
-			this.btnAnexar.Text = "Anexar";
+			this.btnAnexar.Text = "Prévia";
 			this.btnAnexar.UseVisualStyleBackColor = true;
 			// 
 			// maskedTextBox_VencimentoFatura

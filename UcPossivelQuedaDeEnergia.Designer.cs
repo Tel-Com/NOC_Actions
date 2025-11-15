@@ -18,10 +18,15 @@ namespace NOC_Actions
 		private System.Windows.Forms.Button btnSaveAndCopy;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox txtUnitName;
 		private System.Windows.Forms.Button btnClearFields;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnCloseWindow;
+		private System.Windows.Forms.Button btnPrevia;
+		private System.Windows.Forms.ComboBox comboBox_UnidadeComFaltaDeEnergia;
+		private System.Windows.Forms.Button btnDeletarItemSelecionadoDaLista;
+		private System.Windows.Forms.Button btnDeletarListaCompleta;
+		private System.Windows.Forms.CheckBox checkEditarCampoUnidade;
+		private System.Windows.Forms.Label labelAviso;
 		
 		/// <summary>
 		/// Disposes resources used by the control.
@@ -48,16 +53,21 @@ namespace NOC_Actions
 			this.btnSaveAndCopy = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.txtUnitName = new System.Windows.Forms.TextBox();
 			this.btnClearFields = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnCloseWindow = new System.Windows.Forms.Button();
+			this.btnPrevia = new System.Windows.Forms.Button();
+			this.comboBox_UnidadeComFaltaDeEnergia = new System.Windows.Forms.ComboBox();
+			this.btnDeletarItemSelecionadoDaLista = new System.Windows.Forms.Button();
+			this.btnDeletarListaCompleta = new System.Windows.Forms.Button();
+			this.checkEditarCampoUnidade = new System.Windows.Forms.CheckBox();
+			this.labelAviso = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(44, 202);
+			this.label5.Location = new System.Drawing.Point(34, 187);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(391, 13);
 			this.label5.TabIndex = 17;
@@ -66,9 +76,9 @@ namespace NOC_Actions
 			// btnSaveAndCopy
 			// 
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSaveAndCopy.Location = new System.Drawing.Point(339, 316);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
-			this.btnSaveAndCopy.Size = new System.Drawing.Size(114, 33);
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(96, 44);
 			this.btnSaveAndCopy.TabIndex = 1;
 			this.btnSaveAndCopy.Text = "Gravar e Copiar";
 			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
@@ -88,26 +98,18 @@ namespace NOC_Actions
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.label2.Location = new System.Drawing.Point(87, 149);
+			this.label2.Location = new System.Drawing.Point(79, 153);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(57, 17);
 			this.label2.TabIndex = 13;
 			this.label2.Text = "Unidade";
 			// 
-			// txtUnitName
-			// 
-			this.txtUnitName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.txtUnitName.Location = new System.Drawing.Point(148, 145);
-			this.txtUnitName.Name = "txtUnitName";
-			this.txtUnitName.Size = new System.Drawing.Size(241, 25);
-			this.txtUnitName.TabIndex = 0;
-			// 
 			// btnClearFields
 			// 
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnClearFields.Location = new System.Drawing.Point(219, 316);
+			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
-			this.btnClearFields.Size = new System.Drawing.Size(114, 33);
+			this.btnClearFields.Size = new System.Drawing.Size(96, 44);
 			this.btnClearFields.TabIndex = 2;
 			this.btnClearFields.Text = "Apagar";
 			this.btnClearFields.UseVisualStyleBackColor = true;
@@ -120,30 +122,103 @@ namespace NOC_Actions
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(464, 35);
 			this.label1.TabIndex = 9;
-			this.label1.Text = "Prezados, poderiam confirmar possível queda de energia na loja CE___? Constatamos" +
-	" que ambos os links estão indisponíveis neste momento.";
+			this.label1.Text = "Prezados, poderiam confirmar uma possível queda de energia na loja [UNIDADE]? Con" +
+	"statamos que ambos os links encontram-se indisponíveis no momento.";
 			// 
 			// btnCloseWindow
 			// 
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCloseWindow.Location = new System.Drawing.Point(44, 317);
+			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
-			this.btnCloseWindow.Size = new System.Drawing.Size(114, 33);
+			this.btnCloseWindow.Size = new System.Drawing.Size(96, 44);
 			this.btnCloseWindow.TabIndex = 3;
 			this.btnCloseWindow.Text = "Fechar";
 			this.btnCloseWindow.UseVisualStyleBackColor = true;
 			this.btnCloseWindow.Click += new System.EventHandler(this.BtnCloseWindowClick);
 			// 
+			// btnPrevia
+			// 
+			this.btnPrevia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnPrevia.Location = new System.Drawing.Point(153, 315);
+			this.btnPrevia.Name = "btnPrevia";
+			this.btnPrevia.Size = new System.Drawing.Size(96, 44);
+			this.btnPrevia.TabIndex = 18;
+			this.btnPrevia.Text = "Prévia";
+			this.btnPrevia.UseVisualStyleBackColor = true;
+			this.btnPrevia.Click += new System.EventHandler(this.BtnPreviaClick);
+			// 
+			// comboBox_UnidadeComFaltaDeEnergia
+			// 
+			this.comboBox_UnidadeComFaltaDeEnergia.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.comboBox_UnidadeComFaltaDeEnergia.FormattingEnabled = true;
+			this.comboBox_UnidadeComFaltaDeEnergia.Location = new System.Drawing.Point(153, 150);
+			this.comboBox_UnidadeComFaltaDeEnergia.Name = "comboBox_UnidadeComFaltaDeEnergia";
+			this.comboBox_UnidadeComFaltaDeEnergia.Size = new System.Drawing.Size(237, 25);
+			this.comboBox_UnidadeComFaltaDeEnergia.TabIndex = 42;
+			// 
+			// btnDeletarItemSelecionadoDaLista
+			// 
+			this.btnDeletarItemSelecionadoDaLista.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDeletarItemSelecionadoDaLista.Location = new System.Drawing.Point(326, 206);
+			this.btnDeletarItemSelecionadoDaLista.Name = "btnDeletarItemSelecionadoDaLista";
+			this.btnDeletarItemSelecionadoDaLista.Size = new System.Drawing.Size(96, 42);
+			this.btnDeletarItemSelecionadoDaLista.TabIndex = 44;
+			this.btnDeletarItemSelecionadoDaLista.Text = "Deletar Selecionado";
+			this.btnDeletarItemSelecionadoDaLista.UseVisualStyleBackColor = true;
+			this.btnDeletarItemSelecionadoDaLista.Visible = false;
+			this.btnDeletarItemSelecionadoDaLista.Click += new System.EventHandler(this.BtnDeletarItemSelecionadoDaListaClick);
+			// 
+			// btnDeletarListaCompleta
+			// 
+			this.btnDeletarListaCompleta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDeletarListaCompleta.Location = new System.Drawing.Point(224, 206);
+			this.btnDeletarListaCompleta.Name = "btnDeletarListaCompleta";
+			this.btnDeletarListaCompleta.Size = new System.Drawing.Size(96, 42);
+			this.btnDeletarListaCompleta.TabIndex = 45;
+			this.btnDeletarListaCompleta.Text = "Deletar Lista";
+			this.btnDeletarListaCompleta.UseVisualStyleBackColor = true;
+			this.btnDeletarListaCompleta.Visible = false;
+			this.btnDeletarListaCompleta.Click += new System.EventHandler(this.BtnDeletarListaCompletaClick);
+			// 
+			// checkEditarCampoUnidade
+			// 
+			this.checkEditarCampoUnidade.AutoSize = true;
+			this.checkEditarCampoUnidade.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.checkEditarCampoUnidade.Location = new System.Drawing.Point(45, 216);
+			this.checkEditarCampoUnidade.Name = "checkEditarCampoUnidade";
+			this.checkEditarCampoUnidade.Size = new System.Drawing.Size(166, 21);
+			this.checkEditarCampoUnidade.TabIndex = 46;
+			this.checkEditarCampoUnidade.Text = "Editar Campo \'Unidade\'";
+			this.checkEditarCampoUnidade.UseVisualStyleBackColor = true;
+			this.checkEditarCampoUnidade.CheckedChanged += new System.EventHandler(this.CheckEditarCampoUnidadeCheckedChanged);
+			// 
+			// labelAviso
+			// 
+			this.labelAviso.AutoSize = true;
+			this.labelAviso.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelAviso.ForeColor = System.Drawing.Color.Red;
+			this.labelAviso.Location = new System.Drawing.Point(45, 261);
+			this.labelAviso.Name = "labelAviso";
+			this.labelAviso.Size = new System.Drawing.Size(72, 13);
+			this.labelAviso.TabIndex = 47;
+			this.labelAviso.Text = "Aviso de uso";
+			this.labelAviso.Visible = false;
+			// 
 			// UcPossivelQuedaDeEnergia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.labelAviso);
+			this.Controls.Add(this.checkEditarCampoUnidade);
+			this.Controls.Add(this.btnDeletarItemSelecionadoDaLista);
+			this.Controls.Add(this.btnDeletarListaCompleta);
+			this.Controls.Add(this.comboBox_UnidadeComFaltaDeEnergia);
+			this.Controls.Add(this.btnPrevia);
 			this.Controls.Add(this.btnCloseWindow);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.btnSaveAndCopy);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.txtUnitName);
 			this.Controls.Add(this.btnClearFields);
 			this.Controls.Add(this.label1);
 			this.Name = "UcPossivelQuedaDeEnergia";

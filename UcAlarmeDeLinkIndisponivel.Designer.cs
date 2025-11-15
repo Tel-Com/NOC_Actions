@@ -20,9 +20,9 @@ namespace NOC_Actions
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBoxDowntime;
-		private System.Windows.Forms.TextBox textBoxCarrierName;
+		private System.Windows.Forms.ComboBox comboBoxCarrierName;
 		private System.Windows.Forms.Button btnClearFields;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label title_ExemploDeMensagem;
 		private System.Windows.Forms.Button btnCloseWindow;
 		
 		/// <summary>
@@ -52,10 +52,10 @@ namespace NOC_Actions
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.textBoxDowntime = new System.Windows.Forms.TextBox();
-			this.textBoxCarrierName = new System.Windows.Forms.TextBox();
 			this.btnClearFields = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.title_ExemploDeMensagem = new System.Windows.Forms.Label();
 			this.btnCloseWindow = new System.Windows.Forms.Button();
+			this.comboBoxCarrierName = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
 			// label5
@@ -70,9 +70,9 @@ namespace NOC_Actions
 			// btnSaveAndCopy
 			// 
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnSaveAndCopy.Location = new System.Drawing.Point(339, 316);
+			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
-			this.btnSaveAndCopy.Size = new System.Drawing.Size(114, 33);
+			this.btnSaveAndCopy.Size = new System.Drawing.Size(96, 44);
 			this.btnSaveAndCopy.TabIndex = 2;
 			this.btnSaveAndCopy.Text = "Gravar e Copiar";
 			this.btnSaveAndCopy.UseVisualStyleBackColor = true;
@@ -115,51 +115,56 @@ namespace NOC_Actions
 			this.textBoxDowntime.Size = new System.Drawing.Size(196, 25);
 			this.textBoxDowntime.TabIndex = 1;
 			// 
-			// textBoxCarrierName
-			// 
-			this.textBoxCarrierName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.textBoxCarrierName.Location = new System.Drawing.Point(178, 126);
-			this.textBoxCarrierName.Name = "textBoxCarrierName";
-			this.textBoxCarrierName.Size = new System.Drawing.Size(196, 25);
-			this.textBoxCarrierName.TabIndex = 0;
-			// 
 			// btnClearFields
 			// 
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnClearFields.Location = new System.Drawing.Point(219, 316);
+			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
-			this.btnClearFields.Size = new System.Drawing.Size(114, 33);
+			this.btnClearFields.Size = new System.Drawing.Size(96, 44);
 			this.btnClearFields.TabIndex = 3;
 			this.btnClearFields.Text = "Apagar";
 			this.btnClearFields.UseVisualStyleBackColor = true;
 			this.btnClearFields.Click += new System.EventHandler(this.BtnClearFieldsClick);
 			// 
-			// label1
+			// title_ExemploDeMensagem
 			// 
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.label1.Location = new System.Drawing.Point(3, 23);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(464, 51);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Prezados, bom dia! Identificamos alarme do link da __ (operadora) indisponível as" +
-	" ___ (hh:mm). Iremos seguir com acionamento junto ao fornecedor.";
+			this.title_ExemploDeMensagem.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.title_ExemploDeMensagem.Location = new System.Drawing.Point(3, 23);
+			this.title_ExemploDeMensagem.Name = "title_ExemploDeMensagem";
+			this.title_ExemploDeMensagem.Size = new System.Drawing.Size(464, 51);
+			this.title_ExemploDeMensagem.TabIndex = 0;
+			this.title_ExemploDeMensagem.Text = "Prezados, [saudação]! Identificamos que o link da operadora [nome da operadora] e" +
+	"stá indisponível às [hh:mm]. Daremos sequência ao acionamento junto ao fornecedo" +
+	"r.";
 			// 
 			// btnCloseWindow
 			// 
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnCloseWindow.Location = new System.Drawing.Point(44, 317);
+			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
-			this.btnCloseWindow.Size = new System.Drawing.Size(114, 33);
+			this.btnCloseWindow.Size = new System.Drawing.Size(96, 44);
 			this.btnCloseWindow.TabIndex = 4;
 			this.btnCloseWindow.Text = "Fechar";
 			this.btnCloseWindow.UseVisualStyleBackColor = true;
 			this.btnCloseWindow.Click += new System.EventHandler(this.BtnCloseWindowClick);
+			// 
+			// comboBoxCarrierName
+			// 
+			this.comboBoxCarrierName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboBoxCarrierName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboBoxCarrierName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.comboBoxCarrierName.FormattingEnabled = true;
+			this.comboBoxCarrierName.Location = new System.Drawing.Point(178, 126);
+			this.comboBoxCarrierName.Name = "comboBoxCarrierName";
+			this.comboBoxCarrierName.Size = new System.Drawing.Size(196, 25);
+			this.comboBoxCarrierName.TabIndex = 0;
 			// 
 			// UcAlarmeDeLinkIndisponivel
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
+			this.Controls.Add(this.comboBoxCarrierName);
 			this.Controls.Add(this.btnCloseWindow);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.btnSaveAndCopy);
@@ -167,9 +172,8 @@ namespace NOC_Actions
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.textBoxDowntime);
-			this.Controls.Add(this.textBoxCarrierName);
 			this.Controls.Add(this.btnClearFields);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.title_ExemploDeMensagem);
 			this.Name = "UcAlarmeDeLinkIndisponivel";
 			this.Size = new System.Drawing.Size(470, 380);
 			this.ResumeLayout(false);

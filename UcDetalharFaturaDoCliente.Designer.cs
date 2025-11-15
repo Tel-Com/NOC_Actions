@@ -268,6 +268,8 @@
 			// 
 			// textBox_StatusDaFatura
 			// 
+			this.textBox_StatusDaFatura.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.textBox_StatusDaFatura.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.textBox_StatusDaFatura.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.textBox_StatusDaFatura.FormattingEnabled = true;
 			this.textBox_StatusDaFatura.Location = new System.Drawing.Point(239, 179);
@@ -289,6 +291,8 @@
 			// 
 			// textBox_TipoDeOperadoraDoContrato
 			// 
+			this.textBox_TipoDeOperadoraDoContrato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.textBox_TipoDeOperadoraDoContrato.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.textBox_TipoDeOperadoraDoContrato.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.textBox_TipoDeOperadoraDoContrato.FormattingEnabled = true;
 			this.textBox_TipoDeOperadoraDoContrato.Location = new System.Drawing.Point(239, 49);
@@ -298,6 +302,8 @@
 			// 
 			// comboBox_UnidadeASerNotificada
 			// 
+			this.comboBox_UnidadeASerNotificada.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboBox_UnidadeASerNotificada.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboBox_UnidadeASerNotificada.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_UnidadeASerNotificada.FormattingEnabled = true;
 			this.comboBox_UnidadeASerNotificada.Location = new System.Drawing.Point(3, 49);

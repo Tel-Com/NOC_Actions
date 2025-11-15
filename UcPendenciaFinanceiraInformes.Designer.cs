@@ -15,7 +15,7 @@ namespace NOC_Actions
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.ComboBox comboBoxFinBlockUnitName;
+		private System.Windows.Forms.ComboBox comboBoxUnidadeComPendenciaFinanceira;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btnSaveAndCopy;
 		private System.Windows.Forms.Label label4;
@@ -62,7 +62,7 @@ namespace NOC_Actions
 			this.btnCloseWindow = new System.Windows.Forms.Button();
 			this.checkBoxDetalharFatura = new System.Windows.Forms.CheckBox();
 			this.btnViewInvoiceDetails = new System.Windows.Forms.Button();
-			this.comboBoxFinBlockUnitName = new System.Windows.Forms.ComboBox();
+			this.comboBoxUnidadeComPendenciaFinanceira = new System.Windows.Forms.ComboBox();
 			this.txtLabel_campoDeAviso = new System.Windows.Forms.Label();
 			this.btnDeletarItemSelecionadoDaLista = new System.Windows.Forms.Button();
 			this.btnDeletarListaCompleta = new System.Windows.Forms.Button();
@@ -178,14 +178,16 @@ namespace NOC_Actions
 			this.btnViewInvoiceDetails.UseVisualStyleBackColor = true;
 			this.btnViewInvoiceDetails.Click += new System.EventHandler(this.BtnViewInvoiceDetailsClick);
 			// 
-			// comboBoxFinBlockUnitName
+			// comboBoxUnidadeComPendenciaFinanceira
 			// 
-			this.comboBoxFinBlockUnitName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.comboBoxFinBlockUnitName.FormattingEnabled = true;
-			this.comboBoxFinBlockUnitName.Location = new System.Drawing.Point(153, 127);
-			this.comboBoxFinBlockUnitName.Name = "comboBoxFinBlockUnitName";
-			this.comboBoxFinBlockUnitName.Size = new System.Drawing.Size(237, 25);
-			this.comboBoxFinBlockUnitName.TabIndex = 41;
+			this.comboBoxUnidadeComPendenciaFinanceira.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboBoxUnidadeComPendenciaFinanceira.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			this.comboBoxUnidadeComPendenciaFinanceira.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.comboBoxUnidadeComPendenciaFinanceira.FormattingEnabled = true;
+			this.comboBoxUnidadeComPendenciaFinanceira.Location = new System.Drawing.Point(153, 127);
+			this.comboBoxUnidadeComPendenciaFinanceira.Name = "comboBoxUnidadeComPendenciaFinanceira";
+			this.comboBoxUnidadeComPendenciaFinanceira.Size = new System.Drawing.Size(237, 25);
+			this.comboBoxUnidadeComPendenciaFinanceira.TabIndex = 41;
 			// 
 			// txtLabel_campoDeAviso
 			// 
@@ -255,7 +257,7 @@ namespace NOC_Actions
 			this.Controls.Add(this.btnDeletarItemSelecionadoDaLista);
 			this.Controls.Add(this.btnDeletarListaCompleta);
 			this.Controls.Add(this.txtLabel_campoDeAviso);
-			this.Controls.Add(this.comboBoxFinBlockUnitName);
+			this.Controls.Add(this.comboBoxUnidadeComPendenciaFinanceira);
 			this.Controls.Add(this.btnViewInvoiceDetails);
 			this.Controls.Add(this.checkBoxDetalharFatura);
 			this.Controls.Add(this.btnCloseWindow);

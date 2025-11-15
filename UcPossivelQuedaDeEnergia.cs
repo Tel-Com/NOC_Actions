@@ -13,7 +13,6 @@ namespace NOC_Actions
 		{
 			InitializeComponent();
 			CarregarItensEmLista();
-			
 		}
 		
 		private string GetCustomerNotificationMessage()

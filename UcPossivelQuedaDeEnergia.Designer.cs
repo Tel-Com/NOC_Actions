@@ -149,6 +149,8 @@ namespace NOC_Actions
 			// 
 			// comboBox_UnidadeComFaltaDeEnergia
 			// 
+			this.comboBox_UnidadeComFaltaDeEnergia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+			this.comboBox_UnidadeComFaltaDeEnergia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
 			this.comboBox_UnidadeComFaltaDeEnergia.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_UnidadeComFaltaDeEnergia.FormattingEnabled = true;
 			this.comboBox_UnidadeComFaltaDeEnergia.Location = new System.Drawing.Point(153, 150);

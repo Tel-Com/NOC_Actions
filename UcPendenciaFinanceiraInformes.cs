@@ -12,6 +12,7 @@ namespace NOC_Actions
 		public UcPendenciaFinanceiraInformes()
 		{
 			InitializeComponent();
+			CarregarItens();
 		}
 		
 		private void MostrarUserControl(UserControl uc)
@@ -23,9 +24,37 @@ namespace NOC_Actions
 		
 		private string GetCustomerNotificationMessage()
 		{
-			return "Prezados, identificamos a existência de um bloqueio de caráter administrativo-financeiro no contrato da unidade: " + comboBoxFinBlockUnitName.Text.Trim().ToUpper();
+			return "Prezados, identificamos a existência de um bloqueio de caráter administrativo-financeiro no contrato da unidade: " + comboBoxUnidadeComPendenciaFinanceira.Text.Trim().ToUpper();
 		}
 
+		private void SalvarItensNoArquivo()
+		{
+			string salvarArquivoDeUnidadeComPendenciaFinanceira = comboBoxUnidadeComPendenciaFinanceira.Text.Trim();
+			
+			if (!string.IsNullOrWhiteSpace(salvarArquivoDeUnidadeComPendenciaFinanceira) && !comboBoxUnidadeComPendenciaFinanceira.Items.Contains(salvarArquivoDeUnidadeComPendenciaFinanceira))
+			{
+				comboBoxUnidadeComPendenciaFinanceira.Items.Add(salvarArquivoDeUnidadeComPendenciaFinanceira);
+				SalvarItemNoArquivo(comboBoxUnidadeComPendenciaFinanceira, UcPendenciaFinanceiraInformes_arquivoUnidadeComPendenciaFinanceira);
+			}
+		}
+		
+		private void SalvarItemNoArquivo(ComboBox comboBox, string caminhoArquivo)
+		{
+			try {
+				File.WriteAllLines(caminhoArquivo, comboBox.Items.Cast<string>());
+			} catch (Exception ex) {
+				MessageBox.Show("Erro ao realizar este procedimento. \n\n" + ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+		
+		private void CarregarItens()
+		{
+			if (File.Exists(UcPendenciaFinanceiraInformes_arquivoUnidadeComPendenciaFinanceira)) {
+				string[] unidadeComPendencia = File.ReadAllLines(UcPendenciaFinanceiraInformes_arquivoUnidadeComPendenciaFinanceira);
+				comboBoxUnidadeComPendenciaFinanceira.Items.AddRange(unidadeComPendencia);
+			}
+		}
+		
 		void BtnCloseWindowClick(object sender, EventArgs e)
 		{
 			CloseWindow();
@@ -35,22 +64,29 @@ namespace NOC_Actions
 		{
 			ClearField();
 		}
-
-		void BtnSaveAndCopyClick(object sender, EventArgs e)
-		{
-			string msn = GetCustomerNotificationMessage();
-			Clipboard.SetText(msn);
-			ClearField();
-		}
 		
 		void BtnDeletarItemSelecionadoDaListaClick(object sender, EventArgs e)
 		{
-			
+			if (comboBoxUnidadeComPendenciaFinanceira != null) {
+				comboBoxUnidadeComPendenciaFinanceira.Items.Remove(comboBoxUnidadeComPendenciaFinanceira.SelectedItem);
+				SalvarItemNoArquivo(comboBoxUnidadeComPendenciaFinanceira, UcPendenciaFinanceiraInformes_arquivoUnidadeComPendenciaFinanceira);
+			}
 		}
 		
 		void BtnDeletarListaCompletaClick(object sender, EventArgs e)
 		{
-			
+			if (comboBoxUnidadeComPendenciaFinanceira.Items.Count > 0) {
+				comboBoxUnidadeComPendenciaFinanceira.Items.Clear();
+				SalvarItemNoArquivo(comboBoxUnidadeComPendenciaFinanceira, UcPendenciaFinanceiraInformes_arquivoUnidadeComPendenciaFinanceira);
+			}
+		}
+		
+		void BtnSaveAndCopyClick(object sender, EventArgs e)
+		{
+			string msn = GetCustomerNotificationMessage();
+			Clipboard.SetText(msn);
+			SalvarItensNoArquivo();
+			ClearField();
 		}
 		
 		void checkBoxDetalharFatura_CheckedChanged(object sender, EventArgs e)
@@ -98,7 +134,7 @@ namespace NOC_Actions
 		
 		void ClearField()
 		{
-			comboBoxFinBlockUnitName.Text="";
+			comboBoxUnidadeComPendenciaFinanceira.Text="";
 		}
 		
 		void CloseWindow()

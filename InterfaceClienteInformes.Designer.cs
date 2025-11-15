@@ -45,6 +45,7 @@
 			// 
 			// btnAlarmeLinkIndisponivel
 			// 
+			this.btnAlarmeLinkIndisponivel.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAlarmeLinkIndisponivel.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnAlarmeLinkIndisponivel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnAlarmeLinkIndisponivel.Location = new System.Drawing.Point(0, 0);
@@ -56,6 +57,7 @@
 			// 
 			// btnChamadoRegistrado
 			// 
+			this.btnChamadoRegistrado.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnChamadoRegistrado.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnChamadoRegistrado.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnChamadoRegistrado.Location = new System.Drawing.Point(0, 24);
@@ -67,6 +69,7 @@
 			// 
 			// btnLibAcessoSemPrevisao
 			// 
+			this.btnLibAcessoSemPrevisao.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnLibAcessoSemPrevisao.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnLibAcessoSemPrevisao.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnLibAcessoSemPrevisao.Location = new System.Drawing.Point(0, 49);
@@ -78,6 +81,7 @@
 			// 
 			// btnLibAcessoComPrevisao
 			// 
+			this.btnLibAcessoComPrevisao.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnLibAcessoComPrevisao.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnLibAcessoComPrevisao.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnLibAcessoComPrevisao.Location = new System.Drawing.Point(0, 74);
@@ -89,6 +93,7 @@
 			// 
 			// btnAnaliseEnergia
 			// 
+			this.btnAnaliseEnergia.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAnaliseEnergia.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnAnaliseEnergia.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnAnaliseEnergia.Location = new System.Drawing.Point(0, 99);
@@ -126,6 +131,7 @@
 			// 
 			// btnRegistroDeFalhaInternaCliente
 			// 
+			this.btnRegistroDeFalhaInternaCliente.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnRegistroDeFalhaInternaCliente.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnRegistroDeFalhaInternaCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnRegistroDeFalhaInternaCliente.Location = new System.Drawing.Point(0, 147);
@@ -137,6 +143,7 @@
 			// 
 			// btnPendenciaFinanceira
 			// 
+			this.btnPendenciaFinanceira.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnPendenciaFinanceira.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnPendenciaFinanceira.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnPendenciaFinanceira.Location = new System.Drawing.Point(0, 123);

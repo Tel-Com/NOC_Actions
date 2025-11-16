@@ -75,6 +75,7 @@ namespace NOC_Actions
 			// 
 			// btnSaveAndCopy
 			// 
+			this.btnSaveAndCopy.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
@@ -106,6 +107,7 @@ namespace NOC_Actions
 			// 
 			// btnClearFields
 			// 
+			this.btnClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
@@ -127,6 +129,7 @@ namespace NOC_Actions
 			// 
 			// btnCloseWindow
 			// 
+			this.btnCloseWindow.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
@@ -138,6 +141,7 @@ namespace NOC_Actions
 			// 
 			// btnPrevia
 			// 
+			this.btnPrevia.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnPrevia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnPrevia.Location = new System.Drawing.Point(153, 315);
 			this.btnPrevia.Name = "btnPrevia";
@@ -160,6 +164,7 @@ namespace NOC_Actions
 			// 
 			// btnDeletarItemSelecionadoDaLista
 			// 
+			this.btnDeletarItemSelecionadoDaLista.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnDeletarItemSelecionadoDaLista.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDeletarItemSelecionadoDaLista.Location = new System.Drawing.Point(326, 206);
 			this.btnDeletarItemSelecionadoDaLista.Name = "btnDeletarItemSelecionadoDaLista";
@@ -172,6 +177,7 @@ namespace NOC_Actions
 			// 
 			// btnDeletarListaCompleta
 			// 
+			this.btnDeletarListaCompleta.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnDeletarListaCompleta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDeletarListaCompleta.Location = new System.Drawing.Point(224, 206);
 			this.btnDeletarListaCompleta.Name = "btnDeletarListaCompleta";
@@ -185,6 +191,7 @@ namespace NOC_Actions
 			// checkEditarCampoUnidade
 			// 
 			this.checkEditarCampoUnidade.AutoSize = true;
+			this.checkEditarCampoUnidade.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.checkEditarCampoUnidade.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.checkEditarCampoUnidade.Location = new System.Drawing.Point(45, 216);
 			this.checkEditarCampoUnidade.Name = "checkEditarCampoUnidade";

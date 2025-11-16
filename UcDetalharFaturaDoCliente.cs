@@ -50,26 +50,46 @@ namespace NOC_Actions
 		
 		private string DetalhamentoDeFatura()
 		{
-			if (AnaliseDeCamposVazios()) {
+			if (AnaliseDeCamposVazios())
+			{
 				MessageBox.Show("Por favor, preencha todos os campos!");
 				return string.Empty;
 			}
-			
-			string msn = "Prezados, " + ObterSaudacao() + "! Informamos que foi identificado um bloqueio de caráter administrativo-financeiro no contrato da unidade. " +comboBox_UnidadeASerNotificada.Text.ToUpper()+"." +Environment.NewLine +"Seguem, a seguir, os detalhes referentes à situação." +Environment.NewLine +Environment.NewLine;
-			
+
+			string msn = "Prezados, " + ObterSaudacao() + "," + Environment.NewLine +
+				"Informamos que foi identificado um bloqueio de caráter administrativo-financeiro no contrato da unidade " +
+				comboBox_UnidadeASerNotificada.Text.ToUpper() + "." + Environment.NewLine +
+				"A seguir, seguem os detalhes referentes à situação:" + Environment.NewLine + Environment.NewLine;
+
 			string detalheFatura =
 				"Operadora: " + textBox_TipoDeOperadoraDoContrato.Text + Environment.NewLine +
 				"Valor da Fatura: " + maskedTextBox_ValorDaFatura.Text + Environment.NewLine +
 				"Data de Vencimento: " + maskedTextBox_VencimentoFatura.Text + Environment.NewLine +
 				"Código de Pagamento: " + textBox_CodigoDeBarrasDaFatura.Text + Environment.NewLine +
 				"Status: " + textBox_StatusDaFatura.Text + Environment.NewLine +
-				"Observações: " + richTextBox_ObservacaoDaFatura.Text;
+				"Observações: " + richTextBox_ObservacaoDaFatura.Text + Environment.NewLine +
+				"Religamento por inadimplemento: " + CheckReliguePorConfianca();
 
 			return msn + detalheFatura;
 		}
-		
-//		Detalha o modo de tudo do UcDetalhamentoFaturaCliente.cs
-		void BtnDuvidaClick(object sender, EventArgs e)
+
+		private string CheckReliguePorConfianca()
+		{
+			if (religuePorConfianca_Sim.Checked)
+			{
+				return "O procedimento de religamento por confiança foi realizado pela operadora.";
+			}
+			else if (religuePorConfianca_Nao.Checked)
+			{
+				return "O procedimento de religamento por confiança não foi realizado pela operadora.";
+			}
+			else
+			{
+				return "O status do religamento por confiança não foi definido.";
+			}
+		}
+
+		void BtnPreviaClick(object sender, EventArgs e)
 		{
 			string a = DetalhamentoDeFatura();
 			MessageBox.Show(a);
@@ -90,5 +110,6 @@ namespace NOC_Actions
 		{
 			MostrarUserControl(new Config_UcDetalharFaturaDoCliente());
 		}
+		
 	}
 }

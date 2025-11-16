@@ -21,7 +21,6 @@ namespace NOC_Actions
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button btnClearFields;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnCloseWindow;
 		private System.Windows.Forms.CheckBox checkBoxDetalharFatura;
 		private System.Windows.Forms.Button btnViewInvoiceDetails;
@@ -30,6 +29,7 @@ namespace NOC_Actions
 		private System.Windows.Forms.Button btnDeletarListaCompleta;
 		private System.Windows.Forms.CheckBox checkEditarCampoUnidade;
 		private System.Windows.Forms.Label labelEditarCampoUnidade;
+		private System.Windows.Forms.Label label2;
 		
 		/// <summary>
 		/// Disposes resources used by the control.
@@ -58,7 +58,6 @@ namespace NOC_Actions
 			this.label4 = new System.Windows.Forms.Label();
 			this.btnClearFields = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.btnCloseWindow = new System.Windows.Forms.Button();
 			this.checkBoxDetalharFatura = new System.Windows.Forms.CheckBox();
 			this.btnViewInvoiceDetails = new System.Windows.Forms.Button();
@@ -68,6 +67,7 @@ namespace NOC_Actions
 			this.btnDeletarListaCompleta = new System.Windows.Forms.Button();
 			this.checkEditarCampoUnidade = new System.Windows.Forms.CheckBox();
 			this.labelEditarCampoUnidade = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label6
@@ -133,16 +133,6 @@ namespace NOC_Actions
 			this.label1.Text = "Prezados, identificamos a existência de um bloqueio de caráter administrativo-fin" +
 	"anceiro no contrato da unidade [UNIDADE].";
 			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.label2.Location = new System.Drawing.Point(34, 188);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(103, 17);
-			this.label2.TabIndex = 38;
-			this.label2.Text = "Detalhar Fatura?";
-			// 
 			// btnCloseWindow
 			// 
 			this.btnCloseWindow.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -158,7 +148,8 @@ namespace NOC_Actions
 			// checkBoxDetalharFatura
 			// 
 			this.checkBoxDetalharFatura.AutoSize = true;
-			this.checkBoxDetalharFatura.Location = new System.Drawing.Point(140, 188);
+			this.checkBoxDetalharFatura.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.checkBoxDetalharFatura.Location = new System.Drawing.Point(36, 195);
 			this.checkBoxDetalharFatura.Name = "checkBoxDetalharFatura";
 			this.checkBoxDetalharFatura.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxDetalharFatura.TabIndex = 39;
@@ -195,7 +186,7 @@ namespace NOC_Actions
 			this.txtLabel_campoDeAviso.BackColor = System.Drawing.Color.Transparent;
 			this.txtLabel_campoDeAviso.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.txtLabel_campoDeAviso.ForeColor = System.Drawing.Color.Red;
-			this.txtLabel_campoDeAviso.Location = new System.Drawing.Point(34, 208);
+			this.txtLabel_campoDeAviso.Location = new System.Drawing.Point(52, 212);
 			this.txtLabel_campoDeAviso.Name = "txtLabel_campoDeAviso";
 			this.txtLabel_campoDeAviso.Size = new System.Drawing.Size(83, 17);
 			this.txtLabel_campoDeAviso.TabIndex = 42;
@@ -231,7 +222,8 @@ namespace NOC_Actions
 			// checkEditarCampoUnidade
 			// 
 			this.checkEditarCampoUnidade.AutoSize = true;
-			this.checkEditarCampoUnidade.Location = new System.Drawing.Point(187, 211);
+			this.checkEditarCampoUnidade.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.checkEditarCampoUnidade.Location = new System.Drawing.Point(36, 215);
 			this.checkEditarCampoUnidade.Name = "checkEditarCampoUnidade";
 			this.checkEditarCampoUnidade.Size = new System.Drawing.Size(15, 14);
 			this.checkEditarCampoUnidade.TabIndex = 49;
@@ -242,11 +234,21 @@ namespace NOC_Actions
 			// 
 			this.labelEditarCampoUnidade.AutoSize = true;
 			this.labelEditarCampoUnidade.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.labelEditarCampoUnidade.Location = new System.Drawing.Point(34, 208);
+			this.labelEditarCampoUnidade.Location = new System.Drawing.Point(52, 212);
 			this.labelEditarCampoUnidade.Name = "labelEditarCampoUnidade";
-			this.labelEditarCampoUnidade.Size = new System.Drawing.Size(147, 17);
+			this.labelEditarCampoUnidade.Size = new System.Drawing.Size(153, 17);
 			this.labelEditarCampoUnidade.TabIndex = 48;
-			this.labelEditarCampoUnidade.Text = "Editar Campo \'Unidade\'";
+			this.labelEditarCampoUnidade.Text = "Editar Campo \'Unidade\'?";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.label2.Location = new System.Drawing.Point(52, 192);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(103, 17);
+			this.label2.TabIndex = 38;
+			this.label2.Text = "Detalhar Fatura?";
 			// 
 			// UcPendenciaFinanceiraInformes
 			// 
@@ -270,6 +272,7 @@ namespace NOC_Actions
 			this.Controls.Add(this.label5);
 			this.Name = "UcPendenciaFinanceiraInformes";
 			this.Size = new System.Drawing.Size(470, 380);
+			this.Load += new System.EventHandler(this.UcPendenciaFinanceiraInformesLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

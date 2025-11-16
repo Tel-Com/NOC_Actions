@@ -141,5 +141,9 @@ namespace NOC_Actions
 		{
 			this.FindForm().Close();
 		}
+		void UcPendenciaFinanceiraInformesLoad(object sender, EventArgs e)
+		{
+	
+		}
 	}
 }

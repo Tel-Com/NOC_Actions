@@ -16,7 +16,7 @@
 		private System.Windows.Forms.Button btnVoltar;
 		private System.Windows.Forms.Button btnGravarECopiarInformacoesDetalhadas;
 		private System.Windows.Forms.Button btnApagarOsCampos;
-		private System.Windows.Forms.Button btnAnexar;
+		private System.Windows.Forms.Button btnPrevia;
 		private System.Windows.Forms.MaskedTextBox maskedTextBox_VencimentoFatura;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox textBox_OperadoraDaUnidade;
@@ -53,7 +53,7 @@
 			this.btnVoltar = new System.Windows.Forms.Button();
 			this.btnGravarECopiarInformacoesDetalhadas = new System.Windows.Forms.Button();
 			this.btnApagarOsCampos = new System.Windows.Forms.Button();
-			this.btnAnexar = new System.Windows.Forms.Button();
+			this.btnPrevia = new System.Windows.Forms.Button();
 			this.maskedTextBox_VencimentoFatura = new System.Windows.Forms.MaskedTextBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.textBox_OperadoraDaUnidade = new System.Windows.Forms.TextBox();
@@ -147,6 +147,7 @@
 			// religuePorConfianca_Sim
 			// 
 			this.religuePorConfianca_Sim.AutoSize = true;
+			this.religuePorConfianca_Sim.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.religuePorConfianca_Sim.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.religuePorConfianca_Sim.Location = new System.Drawing.Point(8, 286);
 			this.religuePorConfianca_Sim.Name = "religuePorConfianca_Sim";
@@ -158,6 +159,7 @@
 			// religuePorConfianca_Nao
 			// 
 			this.religuePorConfianca_Nao.AutoSize = true;
+			this.religuePorConfianca_Nao.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.religuePorConfianca_Nao.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.religuePorConfianca_Nao.Location = new System.Drawing.Point(60, 286);
 			this.religuePorConfianca_Nao.Name = "religuePorConfianca_Nao";
@@ -168,6 +170,7 @@
 			// 
 			// btnVoltar
 			// 
+			this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnVoltar.Location = new System.Drawing.Point(43, 326);
 			this.btnVoltar.Name = "btnVoltar";
@@ -179,6 +182,7 @@
 			// 
 			// btnGravarECopiarInformacoesDetalhadas
 			// 
+			this.btnGravarECopiarInformacoesDetalhadas.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnGravarECopiarInformacoesDetalhadas.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnGravarECopiarInformacoesDetalhadas.Location = new System.Drawing.Point(366, 326);
 			this.btnGravarECopiarInformacoesDetalhadas.Name = "btnGravarECopiarInformacoesDetalhadas";
@@ -190,6 +194,7 @@
 			// 
 			// btnApagarOsCampos
 			// 
+			this.btnApagarOsCampos.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnApagarOsCampos.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnApagarOsCampos.Location = new System.Drawing.Point(264, 326);
 			this.btnApagarOsCampos.Name = "btnApagarOsCampos";
@@ -198,15 +203,17 @@
 			this.btnApagarOsCampos.Text = "Apagar";
 			this.btnApagarOsCampos.UseVisualStyleBackColor = true;
 			// 
-			// btnAnexar
+			// btnPrevia
 			// 
-			this.btnAnexar.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnAnexar.Location = new System.Drawing.Point(162, 326);
-			this.btnAnexar.Name = "btnAnexar";
-			this.btnAnexar.Size = new System.Drawing.Size(96, 44);
-			this.btnAnexar.TabIndex = 16;
-			this.btnAnexar.Text = "Prévia";
-			this.btnAnexar.UseVisualStyleBackColor = true;
+			this.btnPrevia.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnPrevia.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnPrevia.Location = new System.Drawing.Point(162, 326);
+			this.btnPrevia.Name = "btnPrevia";
+			this.btnPrevia.Size = new System.Drawing.Size(96, 44);
+			this.btnPrevia.TabIndex = 16;
+			this.btnPrevia.Text = "Prévia";
+			this.btnPrevia.UseVisualStyleBackColor = true;
+			this.btnPrevia.Click += new System.EventHandler(this.BtnPreviaClick);
 			// 
 			// maskedTextBox_VencimentoFatura
 			// 
@@ -326,7 +333,7 @@
 			this.Controls.Add(this.textBox_OperadoraDaUnidade);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.maskedTextBox_VencimentoFatura);
-			this.Controls.Add(this.btnAnexar);
+			this.Controls.Add(this.btnPrevia);
 			this.Controls.Add(this.btnVoltar);
 			this.Controls.Add(this.btnGravarECopiarInformacoesDetalhadas);
 			this.Controls.Add(this.btnApagarOsCampos);

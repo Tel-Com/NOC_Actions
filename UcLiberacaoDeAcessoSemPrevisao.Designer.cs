@@ -70,6 +70,7 @@ namespace NOC_Actions
 			// 
 			// btnSaveAndCopy
 			// 
+			this.btnSaveAndCopy.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSaveAndCopy.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnSaveAndCopy.Location = new System.Drawing.Point(357, 315);
 			this.btnSaveAndCopy.Name = "btnSaveAndCopy";
@@ -101,6 +102,7 @@ namespace NOC_Actions
 			// 
 			// btnClearFields
 			// 
+			this.btnClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnClearFields.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnClearFields.Location = new System.Drawing.Point(255, 315);
 			this.btnClearFields.Name = "btnClearFields";
@@ -140,6 +142,7 @@ namespace NOC_Actions
 			// 
 			// btnCloseWindow
 			// 
+			this.btnCloseWindow.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnCloseWindow.Location = new System.Drawing.Point(34, 315);
 			this.btnCloseWindow.Name = "btnCloseWindow";
@@ -151,6 +154,7 @@ namespace NOC_Actions
 			// 
 			// btnMessagePreview
 			// 
+			this.btnMessagePreview.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnMessagePreview.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnMessagePreview.Location = new System.Drawing.Point(153, 315);
 			this.btnMessagePreview.Name = "btnMessagePreview";
@@ -175,6 +179,7 @@ namespace NOC_Actions
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.btnClearFields);
 			this.Controls.Add(this.label1);
+			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Name = "UcLiberacaoDeAcessoSemPrevisao";
 			this.Size = new System.Drawing.Size(470, 380);
 			this.ResumeLayout(false);

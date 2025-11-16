@@ -1,1 +1,3 @@
-﻿
+﻿adicionado no detalhamento da fatura a opção de informes sobre religue por confiança
+ajustado o design de alguns buttons
+criado o user controle Uc_BancoDeArmazenamentoDeDados.cs com a finalidade de listar todas as informações salvas pelo usuário

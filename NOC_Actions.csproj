@@ -104,6 +104,10 @@
     <Compile Include="UcPossivelQuedaDeEnergia.Designer.cs">
       <DependentUpon>UcPossivelQuedaDeEnergia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Uc_BancoDeArmazenamentoDeDados.cs" />
+    <Compile Include="Uc_BancoDeArmazenamentoDeDados.Designer.cs">
+      <DependentUpon>Uc_BancoDeArmazenamentoDeDados.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Config_UcDetalharFaturaDoCliente.resx">

@@ -116,11 +116,5 @@ namespace NOC_Actions
 		{
 			this.FindForm().Close();
 		}
-		
-		void DesabilitarComponente()
-		{
-			
-		}
-		
 	}
 }

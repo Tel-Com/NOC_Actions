@@ -60,7 +60,7 @@ namespace NOC_Actions
 		}
 		void BtnPendenciaFinanceiraClick(object sender, EventArgs e)
 		{
-//				Prezados, XXXXXXXX! Identificamos um Bloqueio Administratrivo Financeiro no Circuito XXXX. Poderiam checar? 
+//				Prezados, [SAUDAÇÃO]! Identificamos um Bloqueio Administratrivo Financeiro no Circuito XXXX. Poderiam checar? 
 			MostrarUserControl(new UcPendenciaFinanceiraInformes());
 		}
 		void BtnRegistroDeFalhaInternaClienteClick(object sender, EventArgs e)

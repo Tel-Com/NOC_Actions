@@ -24,7 +24,7 @@
 			}
 			base.Dispose(disposing);
 		}
-
+		
 		private void InitializeComponent()
 		{
 			this.btnAlarmeLinkIndisponivel = new System.Windows.Forms.Button();
@@ -191,7 +191,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			this.ResumeLayout(false);
-
 		}
 	}
 }

@@ -6,7 +6,6 @@ namespace NOC_Actions
 {
 	public partial class InterfaceClienteInformes : Form
 	{
-		
 		public InterfaceClienteInformes()
 		{
 			InitializeComponent();

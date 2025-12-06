@@ -41,3 +41,7 @@ C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.csproj.Generate
 C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.exe
 C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.pdb
 C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.AvisosSolicitacoesAoCliente.resources
+C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.Uc_AnaliseDeInfra.resources
+C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.Uc_BloqueioFinanceiro.resources
+C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.Uc_LiberacaoDeAcesso.resources
+C:\Users\fjstavares\telcom_dev\NOC_Actions\obj\Debug\NOC_Actions.Uc_PossivelQuedaDeEnergia.resources

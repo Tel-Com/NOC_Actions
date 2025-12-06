@@ -36,11 +36,17 @@ namespace NOC_Actions
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// Uc_PossivelQuedaDeEnergia
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.DarkCyan;
 			this.Name = "Uc_PossivelQuedaDeEnergia";
+			this.Size = new System.Drawing.Size(470, 380);
+			this.ResumeLayout(false);
+
 		}
 	}
 }

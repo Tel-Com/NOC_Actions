@@ -188,6 +188,18 @@
     <EmbeddedResource Include="UcRegistroDeOcorrenciaInterna.resx">
       <DependentUpon>UcRegistroDeOcorrenciaInterna.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Uc_AvisosSolicitacoesAoCliente\Uc_AnaliseDeInfra.resx">
+      <DependentUpon>Uc_AnaliseDeInfra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc_AvisosSolicitacoesAoCliente\Uc_BloqueioFinanceiro.resx">
+      <DependentUpon>Uc_BloqueioFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc_AvisosSolicitacoesAoCliente\Uc_LiberacaoDeAcesso.resx">
+      <DependentUpon>Uc_LiberacaoDeAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc_AvisosSolicitacoesAoCliente\Uc_PossivelQuedaDeEnergia.resx">
+      <DependentUpon>Uc_PossivelQuedaDeEnergia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uc_BancoDeArmazenamentoDeDados.resx">
       <DependentUpon>Uc_BancoDeArmazenamentoDeDados.cs</DependentUpon>
     </EmbeddedResource>

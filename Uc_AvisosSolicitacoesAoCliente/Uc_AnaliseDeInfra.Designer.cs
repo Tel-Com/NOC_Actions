@@ -6,9 +6,9 @@
  * 
  * Para alterar este modelo use Ferramentas | Opções | Codificação | Editar Cabeçalhos Padrão.
  */
-namespace NOC_Actions.Uc_AvisosSolicitacoesAoCliente
+namespace NOC_Actions
 {
-	partial class Uc_AnaliSeDeInfra
+	partial class Uc_AnaliseDeInfra
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -36,11 +36,17 @@ namespace NOC_Actions.Uc_AvisosSolicitacoesAoCliente
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
-			// Uc_AnaliSeDeInfra
+			// Uc_AnaliseDeInfra
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Name = "Uc_AnaliSeDeInfra";
+			this.BackColor = System.Drawing.Color.Black;
+			this.Name = "Uc_AnaliseDeInfra";
+			this.Size = new System.Drawing.Size(470, 380);
+			this.ResumeLayout(false);
+
 		}
 	}
 }

@@ -6,7 +6,7 @@
  * 
  * Para alterar este modelo use Ferramentas | Opções | Codificação | Editar Cabeçalhos Padrão.
  */
-namespace NOC_Actions.Uc_AvisosSolicitacoesAoCliente
+namespace NOC_Actions
 {
 	partial class Uc_BloqueioFinanceiro
 	{
@@ -36,11 +36,17 @@ namespace NOC_Actions.Uc_AvisosSolicitacoesAoCliente
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// Uc_BloqueioFinanceiro
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Crimson;
 			this.Name = "Uc_BloqueioFinanceiro";
+			this.Size = new System.Drawing.Size(470, 380);
+			this.ResumeLayout(false);
+
 		}
 	}
 }

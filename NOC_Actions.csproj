@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{E3E43F4A-B7AE-468A-B544-37CE70A23360}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,11 +7,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>NOC_Actions</RootNamespace>
     <AssemblyName>NOC_Actions</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <NoWin32Manifest>False</NoWin32Manifest>
-    <ApplicationIcon>..\..\Downloads\augmentedreality-5_111389.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,6 +33,12 @@
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Win32.Primitives" />
     <Reference Include="System" />
@@ -51,95 +58,139 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArquivosComInformacoes\Class_Arquivos_Uc_AnaliseDeInfra.cs" />
-    <Compile Include="AvisosSolicitacoesAoCliente.cs" />
+    <Compile Include="AvisosSolicitacoesAoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AvisosSolicitacoesAoCliente.Designer.cs">
       <DependentUpon>AvisosSolicitacoesAoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Class_InformacoesContrato_ReincidenciaDeFalha.cs" />
-    <Compile Include="FormDetalhesDoContrato.cs" />
+    <Compile Include="FormDetalhesDoContrato.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="FormDetalhesDoContrato.Designer.cs">
       <DependentUpon>FormDetalhesDoContrato.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginUsuario.cs" />
-    <Compile Include="UcDetalharFaturaDoCliente.cs" />
+    <Compile Include="UcDetalharFaturaDoCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcDetalharFaturaDoCliente.Designer.cs">
       <DependentUpon>UcDetalharFaturaDoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceClienteInformes.cs" />
+    <Compile Include="InterfaceClienteInformes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InterfaceClienteInformes.Designer.cs">
       <DependentUpon>InterfaceClienteInformes.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginUser.cs" />
+    <Compile Include="LoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginUser.Designer.cs">
       <DependentUpon>LoginUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcInformacoesContrato_ReincidenciaDeFalha.cs" />
+    <Compile Include="UcInformacoesContrato_ReincidenciaDeFalha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcInformacoesContrato_ReincidenciaDeFalha.Designer.cs">
       <DependentUpon>UcInformacoesContrato_ReincidenciaDeFalha.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcPendenciaFinanceiraInformes.cs" />
+    <Compile Include="UcPendenciaFinanceiraInformes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcPendenciaFinanceiraInformes.Designer.cs">
       <DependentUpon>UcPendenciaFinanceiraInformes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcAberturaReparo.cs" />
+    <Compile Include="UcAberturaReparo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcAberturaReparo.Designer.cs">
       <DependentUpon>UcAberturaReparo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcAlarmeDeLinkIndisponivel.cs" />
+    <Compile Include="UcAlarmeDeLinkIndisponivel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcAlarmeDeLinkIndisponivel.Designer.cs">
       <DependentUpon>UcAlarmeDeLinkIndisponivel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcLiberacaoDeAcessoSemPrevisao.cs" />
+    <Compile Include="UcLiberacaoDeAcessoSemPrevisao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcLiberacaoDeAcessoSemPrevisao.Designer.cs">
       <DependentUpon>UcLiberacaoDeAcessoSemPrevisao.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcLiberacaoAcessoComPrevisao.cs" />
+    <Compile Include="UcLiberacaoAcessoComPrevisao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcLiberacaoAcessoComPrevisao.Designer.cs">
       <DependentUpon>UcLiberacaoAcessoComPrevisao.cs</DependentUpon>
     </Compile>
-    <Compile Include="MassivaForm.cs" />
+    <Compile Include="MassivaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MassivaForm.Designer.cs">
       <DependentUpon>MassivaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MassivaMenuConfigurations.cs" />
+    <Compile Include="MassivaMenuConfigurations.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MassivaMenuConfigurations.Designer.cs">
       <DependentUpon>MassivaMenuConfigurations.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcPossivelQuedaDeEnergia.cs" />
+    <Compile Include="UcPossivelQuedaDeEnergia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcPossivelQuedaDeEnergia.Designer.cs">
       <DependentUpon>UcPossivelQuedaDeEnergia.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcRegistroDeOcorrenciaInterna.cs" />
+    <Compile Include="UcRegistroDeOcorrenciaInterna.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UcRegistroDeOcorrenciaInterna.Designer.cs">
       <DependentUpon>UcRegistroDeOcorrenciaInterna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_UserControl_AvisosESolicitacoesAoCliente.cs" />
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_UserControl_AvisosESolicitacoesAoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_UserControl_AvisosESolicitacoesAoCliente.Designer.cs">
       <DependentUpon>Config_UserControl_AvisosESolicitacoesAoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_AnaliseDeInfra.cs" />
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_AnaliseDeInfra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_AnaliseDeInfra.Designer.cs">
       <DependentUpon>Uc_AnaliseDeInfra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_BloqueioFinanceiro.cs" />
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_BloqueioFinanceiro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_BloqueioFinanceiro.Designer.cs">
       <DependentUpon>Uc_BloqueioFinanceiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_LiberacaoDeAcesso.cs" />
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_LiberacaoDeAcesso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_LiberacaoDeAcesso.Designer.cs">
       <DependentUpon>Uc_LiberacaoDeAcesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_PossivelQuedaDeEnergia.cs" />
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_PossivelQuedaDeEnergia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_PossivelQuedaDeEnergia.Designer.cs">
       <DependentUpon>Uc_PossivelQuedaDeEnergia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_BancoDeArmazenamentoDeDados.cs" />
+    <Compile Include="Uc_BancoDeArmazenamentoDeDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Uc_BancoDeArmazenamentoDeDados.Designer.cs">
       <DependentUpon>Uc_BancoDeArmazenamentoDeDados.cs</DependentUpon>
     </Compile>
@@ -210,8 +261,9 @@
       <DependentUpon>Uc_BancoDeArmazenamentoDeDados.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Uc_AvisosSolicitacoesAoCliente" />
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

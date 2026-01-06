@@ -9,32 +9,79 @@ namespace NOC_Actions
 {
 	public partial class Uc_AnaliseDeInfra : UserControl
 	{
-		private readonly Class_Arquivos_Uc_AnaliseDeInfra arquivos;
-		
+		private readonly string arquivo_operadora = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "arquivoOperadora.txt");
+		private readonly string arquivo_unidade = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "arquivoUnidade.txt");
+        private readonly string arquivo_tipoDeAnalise = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "arquivoTipoDeAnalise.txt");
+
 		public Uc_AnaliseDeInfra()
 		{
 			InitializeComponent();
-			arquivos = new Class_Arquivos_Uc_AnaliseDeInfra();
-			CarregarInformacoes();
-		}
-		
-		private void CarregarInformacoes()
+            CarregarItens(arquivo_operadora, comboBox_OperadoraDaUnidade);
+			CarregarItens(arquivo_unidade, comboBox_unidade);
+			CarregarItens(arquivo_tipoDeAnalise, comboBox_tipoDeAnalise);
+        }
+
+		// responsável por salvar a operadora no arquivo
+		private void SalvarOperadoraNoArquivoRespectivo()
 		{
-			comboBox_unidadeParaAnalise.Text = arquivos.Content_UcAnaliseDeInfra_operadora;
-			comboBox_unidade.Text = arquivos.Content_UcAnaliseDeInfra_unidade;
-			comboBox_tipoDeAnalise.Text = arquivos.Content_UcAnaliseDeInfra_tipoDeAnalise;
-		}
-		
-		void BtnSalvarECopiarClick(object sender, EventArgs e)
+			string armazenamento = comboBox_OperadoraDaUnidade.Text.Trim();
+
+            if (!string.IsNullOrWhiteSpace(armazenamento) && !comboBox_OperadoraDaUnidade.Items.Contains(armazenamento))
+            {
+				comboBox_OperadoraDaUnidade.Items.Add(armazenamento);
+				SalvarItensArquivo(comboBox_OperadoraDaUnidade, arquivo_operadora);
+            }
+        }
+
+		private void SalvarUnidadeNoArquivo()
 		{
-			string conteudo_operadora = comboBox_unidadeParaAnalise.Text;
-			arquivos.SalvarOperadora(conteudo_operadora);
-			
-			string conteudo_unidade = comboBox_unidade.Text;
-			arquivos.SalvarUnidade(conteudo_operadora);
-			
-			string conteudo_tipoDeAnalise = comboBox_tipoDeAnalise.Text;
-			arquivos.SalvarTipoDeAnalise(conteudo_tipoDeAnalise);
+			string armazenamento = comboBox_unidade.Text.Trim();
+			if (!string.IsNullOrWhiteSpace(armazenamento) && !comboBox_unidade.Items.Contains(armazenamento))
+			{
+				comboBox_unidade.Items.Add(armazenamento);
+				SalvarItensArquivo(comboBox_unidade, arquivo_unidade);
+			}
 		}
-	}
+		private void SalvarTipoDeAnalise()
+		{
+			string armazenamento = comboBox_tipoDeAnalise.Text.Trim();
+			if(!string.IsNullOrWhiteSpace(armazenamento) && !comboBox_tipoDeAnalise.Items.Contains(armazenamento))
+			{
+				comboBox_tipoDeAnalise.Items.Add(armazenamento);
+				SalvarItensArquivo(comboBox_tipoDeAnalise, arquivo_tipoDeAnalise);
+			}
+		}
+
+		private void SalvarItensArquivo(ComboBox comboBox, string caminhoArquivo)
+		{
+			try
+			{
+				File.WriteAllLines(caminhoArquivo, comboBox.Items.Cast<string>());
+			} catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao realizar o procedimento " + ex);
+			}
+		}
+
+        private void CarregarItens(string arquivo, ComboBox comboBoxLoad)
+        {
+            if (!File.Exists(arquivo)) return;
+
+            comboBoxLoad.Items.Clear();
+            comboBoxLoad.Items.AddRange(
+                File.ReadAllLines(arquivo)
+                    .Distinct()
+                    .ToArray()
+            );
+        }
+
+        // Responsável por Salvar e Gravar informações como um todo
+        private void btnSalvarECopiar_Click_1(object sender, EventArgs e)
+        {
+			SalvarOperadoraNoArquivoRespectivo();
+			SalvarUnidadeNoArquivo();
+			SalvarTipoDeAnalise();
+			MessageBox.Show("Salvo!");
+        }
+    }
 }

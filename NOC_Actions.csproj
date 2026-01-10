@@ -158,12 +158,11 @@
     <Compile Include="UcRegistroDeOcorrenciaInterna.Designer.cs">
       <DependentUpon>UcRegistroDeOcorrenciaInterna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_UserControl_AvisosESolicitacoesAoCliente.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_AnaliseDeInfra.cs" />
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_AnaliseDeInfra.Designer.cs">
+      <DependentUpon>Config_AnaliseDeInfra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Uc_AvisosSolicitacoesAoCliente\Config_UserControl_AvisosESolicitacoesAoCliente.Designer.cs">
-      <DependentUpon>Config_UserControl_AvisosESolicitacoesAoCliente.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Uc_AvisosSolicitacoesAoCliente\InfraFileService.cs" />
     <Compile Include="Uc_AvisosSolicitacoesAoCliente\Uc_AnaliseDeInfra.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcRegistroDeOcorrenciaInterna.resx">
       <DependentUpon>UcRegistroDeOcorrenciaInterna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc_AvisosSolicitacoesAoCliente\Config_AnaliseDeInfra.resx">
+      <DependentUpon>Config_AnaliseDeInfra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Uc_AvisosSolicitacoesAoCliente\Uc_AnaliseDeInfra.resx">
       <DependentUpon>Uc_AnaliseDeInfra.cs</DependentUpon>

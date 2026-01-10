@@ -13,14 +13,13 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.ComboBox comboBox_unidade;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label_aviso;
-		private System.Windows.Forms.ComboBox comboBox_tipoDeAnalise;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.ComboBox comboBox_statusObtidoPelaOperadora;
+        private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.RichTextBox richTextBox_MensagemASerEncaminhadaAoCliente;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button btnGerarAlerta;
+		private System.Windows.Forms.Button bntExcluirSelecionado;
+        private System.Windows.Forms.Button btnGerarAlerta;
 		private System.Windows.Forms.ComboBox comboBox_OperadoraDaUnidade;
 
         /// <summary>
@@ -52,13 +51,12 @@
             this.comboBox_OperadoraDaUnidade = new System.Windows.Forms.ComboBox();
             this.comboBox_unidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label_aviso = new System.Windows.Forms.Label();
-            this.comboBox_tipoDeAnalise = new System.Windows.Forms.ComboBox();
+            this.comboBox_statusObtidoPelaOperadora = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox_MensagemASerEncaminhadaAoCliente = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bntExcluirSelecionado = new System.Windows.Forms.Button();
             this.btnGerarAlerta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -104,6 +102,7 @@
             this.btnApagarCampos.TabIndex = 5;
             this.btnApagarCampos.Text = "Apagar campos";
             this.btnApagarCampos.UseVisualStyleBackColor = false;
+            this.btnApagarCampos.Click += new System.EventHandler(this.btnApagarCampos_Click);
             // 
             // label1
             // 
@@ -158,43 +157,31 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Unidade";
             // 
-            // label_aviso
+            // comboBox_statusObtidoPelaOperadora
             // 
-            this.label_aviso.AutoSize = true;
-            this.label_aviso.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label_aviso.ForeColor = System.Drawing.Color.Red;
-            this.label_aviso.Location = new System.Drawing.Point(15, 85);
-            this.label_aviso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_aviso.Name = "label_aviso";
-            this.label_aviso.Size = new System.Drawing.Size(575, 23);
-            this.label_aviso.TabIndex = 20;
-            this.label_aviso.Text = "Aviso: A designação ficará atrelada à unidade e a outras informações dela.";
-            this.label_aviso.Visible = false;
-            // 
-            // comboBox_tipoDeAnalise
-            // 
-            this.comboBox_tipoDeAnalise.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.comboBox_tipoDeAnalise.FormattingEnabled = true;
-            this.comboBox_tipoDeAnalise.Location = new System.Drawing.Point(15, 132);
-            this.comboBox_tipoDeAnalise.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox_tipoDeAnalise.Name = "comboBox_tipoDeAnalise";
-            this.comboBox_tipoDeAnalise.Size = new System.Drawing.Size(200, 29);
-            this.comboBox_tipoDeAnalise.TabIndex = 2;
+            this.comboBox_statusObtidoPelaOperadora.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.comboBox_statusObtidoPelaOperadora.FormattingEnabled = true;
+            this.comboBox_statusObtidoPelaOperadora.Location = new System.Drawing.Point(15, 119);
+            this.comboBox_statusObtidoPelaOperadora.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_statusObtidoPelaOperadora.Name = "comboBox_statusObtidoPelaOperadora";
+            this.comboBox_statusObtidoPelaOperadora.Size = new System.Drawing.Size(200, 29);
+            this.comboBox_statusObtidoPelaOperadora.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label4.Location = new System.Drawing.Point(15, 107);
+            this.label4.Location = new System.Drawing.Point(15, 94);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 23);
+            this.label4.Size = new System.Drawing.Size(111, 23);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Tipo de análise";
+            this.label4.Text = "Status obtido";
             // 
             // richTextBox_MensagemASerEncaminhadaAoCliente
             // 
-            this.richTextBox_MensagemASerEncaminhadaAoCliente.Location = new System.Drawing.Point(15, 204);
+            this.richTextBox_MensagemASerEncaminhadaAoCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox_MensagemASerEncaminhadaAoCliente.Location = new System.Drawing.Point(15, 189);
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Name = "richTextBox_MensagemASerEncaminhadaAoCliente";
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Size = new System.Drawing.Size(592, 149);
@@ -205,7 +192,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label5.Location = new System.Drawing.Point(15, 180);
+            this.label5.Location = new System.Drawing.Point(15, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(243, 23);
@@ -218,27 +205,28 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(1, 358);
+            this.label7.Location = new System.Drawing.Point(1, 351);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(654, 23);
+            this.label7.Size = new System.Drawing.Size(626, 23);
             this.label7.TabIndex = 26;
             this.label7.Text = "_________________________________________________________________________________" +
-    "___________";
+    "_______";
             // 
-            // button1
+            // bntExcluirSelecionado
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(224, 132);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 29);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bntExcluirSelecionado.BackColor = System.Drawing.Color.Transparent;
+            this.bntExcluirSelecionado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntExcluirSelecionado.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.bntExcluirSelecionado.ForeColor = System.Drawing.Color.Black;
+            this.bntExcluirSelecionado.Location = new System.Drawing.Point(223, 113);
+            this.bntExcluirSelecionado.Margin = new System.Windows.Forms.Padding(4);
+            this.bntExcluirSelecionado.Name = "bntExcluirSelecionado";
+            this.bntExcluirSelecionado.Size = new System.Drawing.Size(162, 38);
+            this.bntExcluirSelecionado.TabIndex = 27;
+            this.bntExcluirSelecionado.Text = "Excluir selecionado";
+            this.bntExcluirSelecionado.UseVisualStyleBackColor = false;
+            this.bntExcluirSelecionado.Click += new System.EventHandler(this.btnEditarInformacoes_Click);
             // 
             // btnGerarAlerta
             // 
@@ -253,6 +241,7 @@
             this.btnGerarAlerta.TabIndex = 28;
             this.btnGerarAlerta.Text = "Gerar";
             this.btnGerarAlerta.UseVisualStyleBackColor = false;
+            this.btnGerarAlerta.Click += new System.EventHandler(this.btnGerarAlerta_Click);
             // 
             // Uc_AnaliseDeInfra
             // 
@@ -260,13 +249,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.btnGerarAlerta);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bntExcluirSelecionado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.richTextBox_MensagemASerEncaminhadaAoCliente);
-            this.Controls.Add(this.comboBox_tipoDeAnalise);
+            this.Controls.Add(this.comboBox_statusObtidoPelaOperadora);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label_aviso);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox_unidade);
             this.Controls.Add(this.comboBox_OperadoraDaUnidade);

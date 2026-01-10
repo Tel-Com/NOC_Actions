@@ -52,3 +52,4 @@ C:\Users\conta\OneDrive\Documents\desenvolvimento\teste\NOC_Actions\obj\Debug\NO
 C:\Users\conta\OneDrive\Documents\desenvolvimento\teste\NOC_Actions\obj\Debug\NOC_Actions.csproj.CoreCompileInputs.cache
 C:\Users\conta\OneDrive\Documents\desenvolvimento\teste\NOC_Actions\obj\Debug\NOC_Actions.exe
 C:\Users\conta\OneDrive\Documents\desenvolvimento\teste\NOC_Actions\obj\Debug\NOC_Actions.pdb
+C:\Users\conta\OneDrive\Documents\desenvolvimento\teste\NOC_Actions\obj\Debug\NOC_Actions.Uc_AvisosSolicitacoesAoCliente.Config_AnaliseDeInfra.resources

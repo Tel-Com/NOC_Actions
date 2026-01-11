@@ -58,6 +58,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bntExcluirSelecionado = new System.Windows.Forms.Button();
             this.btnGerarAlerta = new System.Windows.Forms.Button();
+            this.btnExcluirTodosOsCampos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCloseWindow
@@ -243,11 +244,27 @@
             this.btnGerarAlerta.UseVisualStyleBackColor = false;
             this.btnGerarAlerta.Click += new System.EventHandler(this.btnGerarAlerta_Click);
             // 
+            // btnExcluirTodosOsCampos
+            // 
+            this.btnExcluirTodosOsCampos.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluirTodosOsCampos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluirTodosOsCampos.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnExcluirTodosOsCampos.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluirTodosOsCampos.Location = new System.Drawing.Point(391, 113);
+            this.btnExcluirTodosOsCampos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluirTodosOsCampos.Name = "btnExcluirTodosOsCampos";
+            this.btnExcluirTodosOsCampos.Size = new System.Drawing.Size(120, 38);
+            this.btnExcluirTodosOsCampos.TabIndex = 29;
+            this.btnExcluirTodosOsCampos.Text = "Excluir tudo";
+            this.btnExcluirTodosOsCampos.UseVisualStyleBackColor = false;
+            this.btnExcluirTodosOsCampos.Click += new System.EventHandler(this.btnExcluirTodosOsCampos_Click);
+            // 
             // Uc_AnaliseDeInfra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.btnExcluirTodosOsCampos);
             this.Controls.Add(this.btnGerarAlerta);
             this.Controls.Add(this.bntExcluirSelecionado);
             this.Controls.Add(this.label7);
@@ -270,5 +287,7 @@
             this.PerformLayout();
 
 		}
-	}
+
+        private System.Windows.Forms.Button btnExcluirTodosOsCampos;
+    }
 }

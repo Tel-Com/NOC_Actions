@@ -72,6 +72,9 @@ namespace NOC_Actions
             this.labelMensagemASerEncaminhada = new System.Windows.Forms.Label();
             this.richTextBox_MensagemASerEncaminhadaAoCliente = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnExcluirTodosOsCampos = new System.Windows.Forms.Button();
+            this.bntExcluirSelecionado = new System.Windows.Forms.Button();
+            this.btnAmplicarTexto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -256,7 +259,7 @@ namespace NOC_Actions
             // 
             this.labelMensagemASerEncaminhada.AutoSize = true;
             this.labelMensagemASerEncaminhada.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.labelMensagemASerEncaminhada.Location = new System.Drawing.Point(16, 183);
+            this.labelMensagemASerEncaminhada.Location = new System.Drawing.Point(16, 178);
             this.labelMensagemASerEncaminhada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMensagemASerEncaminhada.Name = "labelMensagemASerEncaminhada";
             this.labelMensagemASerEncaminhada.Size = new System.Drawing.Size(243, 23);
@@ -269,7 +272,7 @@ namespace NOC_Actions
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Location = new System.Drawing.Point(16, 212);
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Name = "richTextBox_MensagemASerEncaminhadaAoCliente";
-            this.richTextBox_MensagemASerEncaminhadaAoCliente.Size = new System.Drawing.Size(591, 136);
+            this.richTextBox_MensagemASerEncaminhadaAoCliente.Size = new System.Drawing.Size(591, 143);
             this.richTextBox_MensagemASerEncaminhadaAoCliente.TabIndex = 61;
             this.richTextBox_MensagemASerEncaminhadaAoCliente.Text = "";
             // 
@@ -279,7 +282,7 @@ namespace NOC_Actions
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label8.Location = new System.Drawing.Point(1, 352);
+            this.label8.Location = new System.Drawing.Point(1, 356);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(654, 23);
@@ -287,11 +290,59 @@ namespace NOC_Actions
             this.label8.Text = "_________________________________________________________________________________" +
     "___________";
             // 
+            // btnExcluirTodosOsCampos
+            // 
+            this.btnExcluirTodosOsCampos.AutoSize = true;
+            this.btnExcluirTodosOsCampos.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluirTodosOsCampos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluirTodosOsCampos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirTodosOsCampos.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluirTodosOsCampos.Location = new System.Drawing.Point(450, 173);
+            this.btnExcluirTodosOsCampos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluirTodosOsCampos.Name = "btnExcluirTodosOsCampos";
+            this.btnExcluirTodosOsCampos.Size = new System.Drawing.Size(110, 33);
+            this.btnExcluirTodosOsCampos.TabIndex = 103;
+            this.btnExcluirTodosOsCampos.Text = "Excluir tudo";
+            this.btnExcluirTodosOsCampos.UseVisualStyleBackColor = false;
+            // 
+            // bntExcluirSelecionado
+            // 
+            this.bntExcluirSelecionado.AutoSize = true;
+            this.bntExcluirSelecionado.BackColor = System.Drawing.Color.Transparent;
+            this.bntExcluirSelecionado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntExcluirSelecionado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntExcluirSelecionado.ForeColor = System.Drawing.Color.Black;
+            this.bntExcluirSelecionado.Location = new System.Drawing.Point(279, 173);
+            this.bntExcluirSelecionado.Margin = new System.Windows.Forms.Padding(4);
+            this.bntExcluirSelecionado.Name = "bntExcluirSelecionado";
+            this.bntExcluirSelecionado.Size = new System.Drawing.Size(164, 33);
+            this.bntExcluirSelecionado.TabIndex = 104;
+            this.bntExcluirSelecionado.Text = "Excluir selecionado";
+            this.bntExcluirSelecionado.UseVisualStyleBackColor = false;
+            // 
+            // btnAmplicarTexto
+            // 
+            this.btnAmplicarTexto.AutoSize = true;
+            this.btnAmplicarTexto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAmplicarTexto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAmplicarTexto.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            this.btnAmplicarTexto.ForeColor = System.Drawing.Color.Black;
+            this.btnAmplicarTexto.Location = new System.Drawing.Point(566, 174);
+            this.btnAmplicarTexto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAmplicarTexto.Name = "btnAmplicarTexto";
+            this.btnAmplicarTexto.Size = new System.Drawing.Size(40, 30);
+            this.btnAmplicarTexto.TabIndex = 105;
+            this.btnAmplicarTexto.Text = "🔎";
+            this.btnAmplicarTexto.UseVisualStyleBackColor = false;
+            // 
             // Uc_PossivelQuedaDeEnergia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.btnAmplicarTexto);
+            this.Controls.Add(this.btnExcluirTodosOsCampos);
+            this.Controls.Add(this.bntExcluirSelecionado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.labelMensagemASerEncaminhada);
             this.Controls.Add(this.richTextBox_MensagemASerEncaminhadaAoCliente);
@@ -317,5 +368,9 @@ namespace NOC_Actions
             this.PerformLayout();
 
 		}
-	}
+
+        private System.Windows.Forms.Button btnExcluirTodosOsCampos;
+        private System.Windows.Forms.Button bntExcluirSelecionado;
+        private System.Windows.Forms.Button btnAmplicarTexto;
+    }
 }

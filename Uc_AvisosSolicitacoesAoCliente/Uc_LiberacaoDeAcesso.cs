@@ -90,6 +90,7 @@ namespace NOC_Actions
             SalvarItem(comboBox_enderecoDaUnidadeResponsavel, arquivoEnderecoDaUnidade);
 
             Clipboard.SetText(mensagem);
+            ClearField();
         }
 
         private void btnGerarAlerta_Click(object sender, EventArgs e)

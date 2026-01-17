@@ -76,8 +76,8 @@ namespace NOC_Actions
                 horarioQueda
             );
 
+            ClearField();
             Clipboard.SetText(mensagem);
-            
             MessageBox.Show("Mensagem copiada para a área de transferência.");
         }
 

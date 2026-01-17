@@ -253,6 +253,11 @@ namespace NOC_Actions
         {
             this.FindForm().Close();
         }
+
+        private void Uc_AnaliseDeInfra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     #endregion
 }

@@ -287,6 +287,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Uc_AnaliseDeInfra";
             this.Size = new System.Drawing.Size(627, 468);
+            this.Load += new System.EventHandler(this.Uc_AnaliseDeInfra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
